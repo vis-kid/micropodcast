@@ -7,12 +7,28 @@
   padding: 0
   margin: 0
 
+// Navigation
+
+header
+  height: 200px
+  background-color: #D21A2E
+
+nav ul
+  +clearfix
+
+nav li
+  +inline-block
+  float: right
+  margin-left: 2px
+  padding: 0px 15px 2px 15px
+  background-color: #E24A5E
+  color: white
+
 // Boxes / Layout
 
 body
   font-family: arial, helvetica, sans-serif
   line-height: 24px
-  background-color: blue
 
 #content
   margin: 24px 0px 0px 48px
@@ -22,7 +38,6 @@ body
 p
   font-size: 15px
   margin-bottom: 24px
-  color: red
 
 a
   color: #39c
@@ -39,8 +54,15 @@ a:hover
 
 // Headings
 
-h1
-  font-size: 40px
+#main_header
+  text-align: center
+  margin-top: 50px
+  font-size: 50px
   font-weight: normal
-  color: #aaa
-  margin-bottom: 24px
+  color: white
+
+#main_subheader
+  text-align: center
+  margin-top: 50px
+  font-weight: normal
+  color: #1F1F1F
