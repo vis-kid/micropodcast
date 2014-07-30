@@ -2,6 +2,7 @@ $LOAD_PATH << './lib'
 
 require 'bundler/setup'
 require 'sinatra'
+require 'sinatra/reloader' if development?
 require 'rdiscount'
 require 'sass'
 require 'slim'
