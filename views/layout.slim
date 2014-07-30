@@ -6,12 +6,14 @@ html lang='en'
     link rel='stylesheet' href='/application.css' type='text/css'
   body
     header
+      .black_line
       nav
         ul
-          li Topics
-          li People
-          li About
+          li: a href='#' Topics
+          li: a href='#' People
+          li: a href='#' About
       h1#main_header BETWEEN_SCREENS
       h2#main_subheader Web Tech Podcast
+    .knowledge_bomb_section
     section
       == yield
