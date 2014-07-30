@@ -1,12 +1,12 @@
 class App
 
   get '/' do
-		@title = ':home'
+		@title = ' :home'
     slim :home
   end
 
-  get '/style.css' do
-    sass :styles
+  get '/application.css' do
+    sass :application
   end
 
 end

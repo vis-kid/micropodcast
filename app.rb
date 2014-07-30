@@ -4,7 +4,6 @@ $LOAD_PATH << './lib'
 require 'bundler/setup'
 require 'sinatra/base'
 require 'rdiscount'
-require 'haml'
 require 'sass'
 require 'slim'
 
