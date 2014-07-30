@@ -1,7 +1,8 @@
 source "http://rubygems.org"
 gem "sinatra"
+gem 'sinatra-contrib'
 gem "rdiscount"
-gem "haml"
 gem "slim"
 gem "sass"
-gem 'sinatra-contrib'
+gem 'bourbon'
+
