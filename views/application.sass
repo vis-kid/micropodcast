@@ -14,36 +14,42 @@ $dark_grey: #1F1F1F
 body
   +outer-container
 
-.black_line
+.white_line
   +span-columns(12)
-  background-color: $dark_grey
+  background-color: white
   height: 2px
 
 // Navigation
 
 header
-  height: 200px
-  background-color: $red 
   +span-columns(12)
+  height: 220px
+  background-color: $red 
+  border-radius: 2px
 
 nav ul
   +clearfix
 
 nav li
   +inline-block
-  +transition(all 0.3s ease-in-out)
+  +transition(all 0.1s ease-in-out)
   float: right
-  margin: 2px 0px 0px 2px
-  padding: 3px 15px 3px 15px
+  margin: 0px 0px 0px 3px
+  padding: 5px 20px 5px 20px
   background-color: $nav_bg_color 
   color: white
   &:hover
-    background-color: #212121
+    background-color: shade(white, 2%)
+    color: $red
 
 nav a
   text-decoration: none
   color: white
   font-size: 30px
+  &:hover
+    color: $red
+
+
 // Boxes / Layout
 
 body
@@ -64,8 +70,8 @@ p
 
 #main_header
   text-align: center
-  margin-top: 50px
-  font-size: 50px
+  margin-top: 70px
+  font-size: 70px
   font-weight: normal
   color: white
 
@@ -77,6 +83,7 @@ p
 
 .knowledge_bomb_section
   +span-columns(12)
+  border-radius: 2px
   height: 300px 
   background-color: $red
   margin-top: 2px
