@@ -5,4 +5,5 @@ gem "rdiscount"
 gem "slim"
 gem "sass"
 gem 'bourbon'
+gem 'neat'
 
