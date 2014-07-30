@@ -7,9 +7,6 @@ require 'rdiscount'
 require 'sass'
 require 'slim'
 
-# Database
-require 'app_db'
-
 class App < Sinatra::Base
 
   # app_db = AppDB.new
