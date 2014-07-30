@@ -1,20 +1,17 @@
 $LOAD_PATH << './lib'
 
-# Gems
 require 'bundler/setup'
-require 'sinatra/base'
+require 'sinatra'
 require 'rdiscount'
 require 'sass'
 require 'slim'
 
-class App < Sinatra::Base
-
-  # app_db = AppDB.new
-
-  # Configuration
-  set :root, File.dirname(__FILE__)
-
+get '/' do
+	@title = ' :home'
+  slim :home
 end
 
-# Routes
-require 'app_main'
+get '/application.css' do
+  sass :application
+end
+
