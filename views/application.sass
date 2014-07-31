@@ -22,6 +22,7 @@ header, .knowledge_bomb_section
   background-color: $red
   border-radius: 2px
 
+
 #main_header, #main_subheader
   text-align: center
   font-weight: normal
@@ -29,8 +30,17 @@ header, .knowledge_bomb_section
 nav li, nav a, #main_header
   color: white
 
-header, .knowledge_bomb_section
-  opacity: .95
+header
+  opacity: .83
+
+.knowledge_bomb_section
+  opacity: .77
+
+.white_layer
+  +span-columns(12)
+  height: 4000px
+  opacity: .9
+  background: white
 
 
 
@@ -40,9 +50,11 @@ body
   +outer-container
   font-family: $lucida-grande
   line-height: 24px
+  height: 5000px
 
-.global_bg
-  background-color: blue
+#global_bg
+  +outer-container
+  height: 4000px
 
 .white_line
   background-color: white

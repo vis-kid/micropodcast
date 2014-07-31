@@ -3,17 +3,27 @@ html lang='en'
   head
     title between_screens #{@title}
     meta charset='uft-8'
+		
     link rel='stylesheet' href='/application.css' type='text/css'
-		script src="/javascripts/application.js"
+
+    script src="http://d3js.org/d3.v3.min.js" charset="utf-8"
+    script type="text/javascript" src="triangles.min.js" 
+
   body
-    .global_bg
+    #global_bg
       header
         .white_line
         nav
           ul
             li: a href='#' ABOUT
+            li: a href='#' PEOPLE
+            li: a href='#' TOPICS
         h1#main_header BETWEEN_SCREENS
         h2#main_subheader  Yada Yada Yada
       .knowledge_bomb_section
+      .white_layer
       section
         == yield
+
+  script src="/javascripts/application.js"
+
