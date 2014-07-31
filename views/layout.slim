@@ -5,13 +5,14 @@ html lang='en'
     meta charset='uft-8'
     link rel='stylesheet' href='/application.css' type='text/css'
   body
-    header
-      .white_line
-      nav
-        ul
-          li: a href='#' About
-      h1#main_header BETWEEN_SCREENS
-      h2#main_subheader  Yada Yada Yada
-    .knowledge_bomb_section
-    section
-      == yield
+    .global_bg
+      header
+        .white_line
+        nav
+          ul
+            li: a href='#' ABOUT
+        h1#main_header BETWEEN_SCREENS
+        h2#main_subheader  Yada Yada Yada
+      .knowledge_bomb_section
+      section
+        == yield
