@@ -6,4 +6,6 @@ gem "slim"
 gem "sass"
 gem 'bourbon'
 gem 'neat'
+gem 'coffee-script'
+gem "therubyracer"
 
