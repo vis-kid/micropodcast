@@ -22,7 +22,6 @@ header, .knowledge_bomb_section
   background-color: $red
   border-radius: 2px
 
-
 #main_header, #main_subheader
   text-align: center
   font-weight: normal
@@ -63,7 +62,7 @@ body
 // Navigation
 
 header
-  height: 220px
+  height: 200px
 
 nav ul
   +clearfix
@@ -72,17 +71,17 @@ nav li
   +inline-block
   +transition(all 0.1s ease-in-out)
   float: right
-  margin: 0px 0px 0px 3px
+  margin: 0px 0px 0px 2px
   padding: 5px 35px 5px 35px
   background-color: $nav_bg_color 
   &:hover
     background-color: shade(white, 2%)
+    a
+      color: $red
 
 nav a
   text-decoration: none
   font-size: 25px
-  &:hover
-    color: $red
 
 
 // Boxes / Layout
@@ -100,7 +99,7 @@ p
 // Header
 
 #main_header
-  margin-top: 70px
+  margin-top: 50px
   font-size: 70px
 
 #main_subheader
@@ -108,5 +107,5 @@ p
   color: $dark_grey
 
 .knowledge_bomb_section
-  height: 300px 
+  height: 324px 
   margin-top: 2px
