@@ -19,7 +19,6 @@ header, .global_bg, .white_line, .knowledge_bomb_section
   +span-columns(12)
 
 header, .knowledge_bomb_section
-  background-color: $red
   border-radius: 2px
 
 #main_header, #main_subheader
@@ -30,16 +29,18 @@ nav li, nav a, #main_header
   color: white
 
 header
-  opacity: .83
+  background: rgba($red, .83)
+
+  //opacity: .77
 
 .knowledge_bomb_section
-  opacity: .77
+  background: rgba($red, .77)
 
-.white_layer
+
+//.white_layer
   +span-columns(12)
-  height: 4000px
-  opacity: .9
   background: white
+  background: rgba(white, .7)
 
 
 
@@ -114,5 +115,31 @@ p
 .bomb_icon
   +shift(4.684)
   +transform(rotate(76deg))
+  opacity: .97
   margin-top: 65px
   height: 55%
+
+.iframe_container
+  background: white
+  height: 324px
+  margin-top: -47px
+
+.iframe_transparent_container
+  background: white
+  background: rgba(white, .90)
+  height: 324px
+  margin-top: -47px
+  
+
+iframe
+  +span-columns(8)
+  +shift(2)
+  margin-top: 125px
+
+.episode_title, .episode_sub_title
+  +shift(2)
+  +span-columns(8)
+  color: $dark_grey
+  font-weight: normal
+
+.episode_title
