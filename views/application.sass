@@ -15,7 +15,7 @@ $dark_grey: #1F1F1F
 
 // REFACTORINGS
 
-header, .global_bg, .white_line, .knowledge_bomb_section
+//header, .global_bg, .white_line, .knowledge_bomb_section
   +span-columns(12)
 
 header, .knowledge_bomb_section
@@ -37,10 +37,8 @@ header
   background: rgba($red, .77)
 
 
-//.white_layer
+.white_layer
   +span-columns(12)
-  background: white
-  background: rgba(white, .7)
 
 
 
@@ -117,22 +115,21 @@ p
   margin-top: 65px
   height: 55%
 
+.iframe_container, .iframe_transparent_container
+  height: 324px
+  margin-top: 1px
+  
 .iframe_container
   background: white
-  height: 324px
-  margin-top: -47px
 
 .iframe_transparent_container
-  background: white
-  background: rgba(white, .90)
-  height: 324px
-  margin-top: -47px
+  background: rgba(white, .95)
   
 
 iframe
   +span-columns(8)
   +shift(2)
-  margin-top: 125px
+  margin-top: 30px
 
 .episode_title, .episode_sub_title
   +shift(2)
@@ -141,6 +138,11 @@ iframe
   font-weight: normal
 
 .episode_title
+  padding-top: 20px
+
+.episode_sub_title
+  padding-top: 20px
+
 
 footer
   +span-columns(12)
