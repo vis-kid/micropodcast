@@ -25,7 +25,7 @@ header, .knowledge_bomb_section
   text-align: center
   font-weight: normal
 
-nav li, nav a, #main_header
+nav li, nav a, #main_header, #list_view li
   color: white
 
 header
@@ -61,8 +61,11 @@ body
 header
   height: 200px
 
-nav ul
+nav ul #list_view 
   +clearfix
+
+nav li
+  background-color: $nav_bg_color 
 
 nav li
   +inline-block
@@ -80,6 +83,24 @@ nav a
   text-decoration: none
   font-size: 25px
 
+#list_view
+  margin-top: -27px
+  
+#list_view li
+  +inline-block
+  margin-right: 40px
+  padding-left: 30px
+  padding-right: 30px
+  color:white
+  &:hover
+    background-color: shade(white, 2%)
+    a
+      color: $red
+
+#list_view a
+  text-decoration: none
+  color: white
+  font-size: 25px
 
 // Boxes / Layout
 
@@ -152,3 +173,4 @@ footer
   height: 200px
   background: white
 
+  
