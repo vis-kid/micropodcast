@@ -8,4 +8,7 @@ gem 'bourbon'
 gem 'neat'
 gem 'coffee-script'
 gem "therubyracer"
+gem 'dm-core'
+gem 'dm-migrations'
+gem 'dm-sqlite-adapter'
 
