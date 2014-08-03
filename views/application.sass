@@ -18,7 +18,7 @@ $dark_grey: #1F1F1F
 //header, .global_bg, .white_line, .knowledge_bomb_section
   +span-columns(12)
 
-header, .knowledge_bomb_section, 
+header, .knowledge_bomb_section
   border-radius: 2px
 
 #main_header, #main_subheader
@@ -35,6 +35,7 @@ header
 
 .knowledge_bomb_section
   background: rgba($red, .77)
+  
 
 
 .white_layer
@@ -108,15 +109,21 @@ p
   color: $dark_grey
 
 .knowledge_bomb_section
+  +outer-container
   height: 324px 
-  margin-top: 2px
+  margin-top: -63px
 
 .bomb_icon
-  +shift(4.684)
+  //+shift(4.684)
   +transform(rotate(76deg))
   opacity: .97
   margin-top: 65px
+  padding-top: 4px
+  padding-left: 110px
   height: 55%
+  display: block
+  margin-left: auto
+  margin-right: auto
 
 .iframe_container, .iframe_transparent_container
   height: 324px
