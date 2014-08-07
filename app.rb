@@ -56,7 +56,6 @@ post '/episodes' do
   redirect to("/episodes/#{ episode.id }")
 end
 
-
 get '/about' do
   @title = ' :about'
   slim :about
