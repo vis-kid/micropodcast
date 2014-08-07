@@ -7,6 +7,10 @@
   frameborder="no" 
   src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/#{@episode.soundcloud_id}&amp;auto_play=false&amp;hide_related=false&amp;show_comments=false&amp;show_user=true&amp;show_reposts=false&amp;visual=true"]
   a.edit_button href="/episodes/#{ @episode.id }/edit" Edit this episode
+  
+  form  method="POST" action=="/episodes/#{@episode.id}"
+    input type="hidden" name="_method" value="DELETE"
+    input type="submit" value="Delete this episode"
 
 
 

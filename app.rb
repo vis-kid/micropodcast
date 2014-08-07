@@ -43,6 +43,12 @@ put '/episodes/:id' do
 	redirect to("/episodes/#{ episode.id }")
 end
 
+delete '/episodes/:id' do
+	episode = find_episode
+	episode.destroy
+	redirect to('/')
+end
+
 post '/episodes' do
   episode = Episode.create(params[:episode])
 	redirect to("/episodes/#{ episode.id }")
