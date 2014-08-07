@@ -1,0 +1,28 @@
+doctype 5
+html lang='en'
+  head
+    title between_screens #{@title}
+    meta charset='utf-8'
+    link rel='stylesheet' href='/application.css' type='text/css'
+    script src="http://d3js.org/d3.v3.min.js" charset="utf-8"
+    script src="/triangles.min.js" type="text/javascript"   
+    script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"
+  body
+    #global_bg
+      header
+        .white_line
+        nav
+          ul
+            li: a href='/about' ABOUT
+            li: a href='/' PEOPLE
+            li: a href='/topics' TOPICS
+        h1#main_header BETWEEN | SCREENS
+        h2#main_subheader Code | Design
+
+      section
+        == yield
+      footer
+        .paginate_space
+
+script src="/javascripts/application.js"
+

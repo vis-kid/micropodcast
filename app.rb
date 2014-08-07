@@ -11,9 +11,7 @@ require './episode.rb'
 require 'sinatra'
 require 'puma'
 
-
 configure { set :server, :puma }
-
 
 get('/javascripts/application.js'){ coffee :application }
 get('/application.css'){ sass :application }
@@ -26,7 +24,7 @@ end
 
 get '/episodes/:id' do
 	@episode = Episode.get(params[:id])
-	slim :show_episode
+	slim :show_episode, layout: :simple_layout
 end
 
 get '/about' do
@@ -36,4 +34,3 @@ end
 get '/topics' do
 	slim :topics
 end
-
