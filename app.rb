@@ -28,17 +28,17 @@ get '/episodes/new' do
 end
 
 get '/episodes/:id' do
-	@episode = Episode.get(params[:id])
+	@episode = find_episode
 	slim :show_episode, layout: :simple_layout
 end
 
 get '/episodes/:id/edit' do
-	@episode = Episode.get(params[:id])
-  slim :edit_episode
+	@episode = find_episode
+  slim :edit_episode, layout: :simple_layout
 end
 
 put '/episodes/:id' do
-	episode = Episode.get(params[:id])
+	episode = find_episode
   episode.update(params[:episode])
 	redirect to("/episodes/#{ episode.id }")
 end
@@ -55,4 +55,8 @@ end
 
 get '/topics' do
 	slim :topics
+end
+
+def find_episode
+	Episode.get(params[:id])
 end
