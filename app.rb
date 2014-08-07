@@ -8,6 +8,12 @@ require 'rdiscount'
 require 'sass'
 require 'slim'
 require './episode.rb'
+require 'sinatra'
+require 'puma'
+
+
+configure { set :server, :puma }
+
 
 get('/javascripts/application.js'){ coffee :application }
 get('/application.css'){ sass :application }

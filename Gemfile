@@ -11,4 +11,5 @@ gem "therubyracer"
 gem 'dm-core'
 gem 'dm-migrations'
 gem 'dm-sqlite-adapter'
+gem 'puma'
 
