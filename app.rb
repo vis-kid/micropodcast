@@ -32,10 +32,22 @@ get '/episodes/:id' do
 	slim :show_episode, layout: :simple_layout
 end
 
+get '/episodes/:id/edit' do
+	@episode = Episode.get(params[:id])
+  slim :edit_episode
+end
+
+put '/episodes/:id' do
+	episode = Episode.get(params[:id])
+  episode.update(params[:episode])
+	redirect to("/episodes/#{ episode.id }")
+end
+
 post '/episodes' do
   episode = Episode.create(params[:episode])
 	redirect to("/episodes/#{ episode.id }")
 end
+
 
 get '/about' do
 	slim :about
