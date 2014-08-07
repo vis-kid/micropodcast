@@ -18,4 +18,16 @@ get '/' do
   slim :home
 end
 
+get '/episodes/:id' do
+	@episode = Episode.get(params[:id])
+	slim :show_episode
+end
+
+get '/about' do
+	slim :about
+end
+
+get '/topics' do
+	slim :topics
+end
 
