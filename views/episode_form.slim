@@ -1,0 +1,27 @@
+.input_label
+  label for='title' Title:
+.input_field
+  input#title type='text' name='episode[title]' value="#{@episode.title}"
+
+.input_label
+  label for='interviewee_name' Interviewe Name:
+.input_field
+  input#interviewee_name type='text' name='episode[interviewee_name]' value="#{@episode.interviewee_name}"
+
+.input_label
+  label for='soundcloud_id' SoundCloud id:
+.input_field
+  input#length type='number' name='episode[soundcloud_id]' value="#{@episode.soundcloud_id}"
+
+.input_label
+  label for='length' Length:
+.input_field
+  input#length type='number' name='episode[length]' value="#{@episode.length}"
+
+.input_label
+  label for='released_on' Released on | Date( mm/dd/yyyy ):
+.input_field
+  input#released_on type='text' name='episode[released_on]' value="#{@episode.released_on.strftime("%m/%d/%Y") if @episode.released_on}"
+
+.input_label
+  input type='submit' value='Save Episode'

@@ -22,6 +22,11 @@ get '/' do
   slim :home
 end
 
+get '/episodes/new' do
+  @episode = Episode.new
+	slim :new_episode, layout: :simple_layout
+end
+
 get '/episodes/:id' do
 	@episode = Episode.get(params[:id])
 	slim :show_episode, layout: :simple_layout
