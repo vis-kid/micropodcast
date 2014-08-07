@@ -12,6 +12,10 @@ class Episode
 	property  :released_on,      Date
   property  :soundcloud_id,    Integer
 	property  :interviewee_name, String, :length => 255
+
+	def released_on=date
+    super Date.strptime(date, '%m/%d/%Y')
+	end
 end
 
 DataMapper.finalize
