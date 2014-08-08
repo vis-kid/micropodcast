@@ -11,8 +11,9 @@ require './episode.rb'
 require 'sinatra'
 require 'puma'
 
-configure { set :server, :puma }
 configure do
+  set :server, :puma 
+  set :session_secret, '50me 5ecret Matr1ck5 next level 5h1t'
 	enable :sessions
 end
 
