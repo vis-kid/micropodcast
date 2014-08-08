@@ -30,7 +30,7 @@ module Sinatra
           session[:admin] = true
           redirect to('/')
 				else
-          redirect to('/login')
+          redirect to('/lllogin')
 				end
 			end
 
