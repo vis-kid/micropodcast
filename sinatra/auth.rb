@@ -21,11 +21,11 @@ module Sinatra
       app.set username: 'Bombcaster',
               password: 'Micropodcast'
      
-      app.get '/login' do
+      app.get '/lllogin' do
 				slim :login
 			end
 
-      app.post '/login' do
+      app.post '/lllogin' do
 				if params[:username] == settings.username && params[:password] == settings.password
           session[:admin] = true
           redirect to('/')
