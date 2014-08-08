@@ -1,3 +1,4 @@
+require './sinatra/auth'
 require 'v8'
 require 'coffee-script'
 require 'bundler/setup'
@@ -11,6 +12,9 @@ require 'sinatra'
 require 'puma'
 
 configure { set :server, :puma }
+configure do
+	enable :sessions
+end
 
 get('/javascripts/application.js'){ coffee :application }
 get('/application.css'){ sass :application }
@@ -22,6 +26,7 @@ get '/' do
 end
 
 get '/episodes/new' do
+  protected!
   @title = ' :new episode'
   @episode = Episode.new
   slim :new_episode 
@@ -34,24 +39,28 @@ get '/episodes/:id' do
 end
 
 get '/episodes/:id/edit' do
+  protected!
   @title = ' :edit'
   @episode = find_episode
   slim :edit_episode 
 end
 
 put '/episodes/:id' do
+  protected!
   episode = find_episode
   episode.update(params[:episode])
   redirect to("/episodes/#{ episode.id }")
 end
 
 delete '/episodes/:id' do
+  protected!
   episode = find_episode
   episode.destroy
   redirect to('/')
 end
 
 post '/episodes' do
+  protected!
   episode = Episode.create(params[:episode])
   redirect to("/episodes/#{ episode.id }")
 end
