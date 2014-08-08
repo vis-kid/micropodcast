@@ -80,6 +80,14 @@ not_found do
 	slim :not_found
 end
 
+helpers do
+  def admin?
+		session[:admin]
+	end
+end
+
+private
+
 def find_episode
   Episode.get(params[:id])
 end

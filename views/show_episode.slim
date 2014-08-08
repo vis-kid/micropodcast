@@ -1,8 +1,9 @@
-#button_container
-  a#edit_button href="/episodes/#{ @episode.id }/edit" Edit episode
-  form#delete_button  method="POST" action=="/episodes/#{@episode.id}"
-    input type="hidden" name="_method" value="DELETE"
-    input type="submit" value="Delete episode"
+-if admin?
+  #button_container
+    a#edit_button href="/episodes/#{ @episode.id }/edit" Edit episode
+    form#delete_button  method="POST" action=="/episodes/#{@episode.id}"
+      input type="hidden" name="_method" value="DELETE"
+      input type="submit" value="Delete episode"
 
 .shownote_container 
   h2.episode_title #{ @episode.title }
