@@ -33,7 +33,7 @@ footer, .white_layer, .shownote_container, .episode_form_container, .episode_for
 .input_label, .input_field, .episode_form_header, #show_notes_input
   +shift(1)
 
-.episode_title, .episode_sub_title, iframe, .shownote_container input[type="submit"], .shownote_container a, #show_notes_display
+.episode_title, .episode_sub_title, iframe, #show_notes_display
   +shift(2)
 
 header, .knowledge_bomb_section
@@ -172,17 +172,12 @@ footer
   +span_columns(2)
   +button($light_green)
   
-.shownote_container input[type="submit"]
-  +button(red)
 
 .episode_form_header
   margin-top: 20px
   margin-bottom: 20px
   font-size: 30px
 
-.shownote_container a
-  +button
-  margin-top: 20px
 
 #show_notes_input
   height: 500px
@@ -194,3 +189,17 @@ footer
   line-height: 1.5em
   font-size: 27px
   white-space: pre-wrap
+
+#button_container
+  +span-columns(12)
+  margin-top: 2px
+  background: rgba(white, 0.85)
+
+//.shownote_container input[type="submit"]
+#delete_button input[type="submit"]
+  +button(red)
+
+#edit_button 
+  +button
+  width: 190px
+  margin-bottom: 5px
