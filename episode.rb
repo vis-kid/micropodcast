@@ -5,6 +5,7 @@ DataMapper.setup(:default, "sqlite3://#{Dir.pwd}/development.db")
 
 class Episode
   include DataMapper::Resource
+
   property  :id,               Serial
   property  :title,            String, :length => 255
   property  :length,           Integer
