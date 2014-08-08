@@ -34,4 +34,9 @@
                       value="#{@episode.released_on.strftime("%m/%d/%Y") if @episode.released_on}" ]
 
 .input_label
+  label for='show_notes' Show Notes:
+.input_textarea_field
+  textarea#show_notes_input name='episode[show_notes]' =@episode.show_notes
+
+.input_label
   input type='submit' value='Save Episode'
