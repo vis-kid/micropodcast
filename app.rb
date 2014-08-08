@@ -76,6 +76,10 @@ get '/topics' do
   slim :topics
 end
 
+not_found do
+	slim :not_found
+end
+
 def find_episode
   Episode.get(params[:id])
 end
