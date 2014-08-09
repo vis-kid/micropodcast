@@ -26,7 +26,7 @@ footer, .white_layer, .shownote_container, .episode_form_container, .episode_for
 .input_label, .input_field, #show_notes_input 
   +span-columns(10)
 
-.episode_title, .episode_sub_title, #show_notes_display
+#show_notes_display
   +span-columns(8)
   font-weight: normal
 
@@ -148,13 +148,21 @@ p
 
 iframe
   +span-columns(8)
-  margin-top: 30px
+  margin-top: 20px
 
 .episode_title
-  padding-top: 30px
+  padding-top: 20px
+  line-height: 1.3em
+
+.interviewee_name_link
+  color: red
 
 .episode_sub_title
-  padding-top: 20px
+  margin-top: 10px
+  font-size: 18px
+
+.episode_sub_title span
+  color: $red
 
 footer
   height: 324px
@@ -175,12 +183,10 @@ footer
   +span_columns(2)
   +button($light_green)
   
-
 .episode_form_header
   margin-top: 20px
   margin-bottom: 20px
   font-size: 30px
-
 
 #show_notes_input
   height: 500px
