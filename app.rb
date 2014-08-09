@@ -77,7 +77,7 @@ get '/topics' do
 end
 
 not_found do
-	slim :not_found
+	slim :not_found, layout: :knowledge_bomb_layout
 end
 
 helpers do
