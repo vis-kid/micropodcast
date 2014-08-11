@@ -28,7 +28,7 @@ end
 get('/javascripts/application.js'){ coffee :application }
 get('/application.css'){ sass :application }
 
-get '' do
+get '/' do
   @title = ' :home'
   @episodes = Episode.all
   slim :home, layout: :knowledge_bomb_layout
