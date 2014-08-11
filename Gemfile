@@ -9,7 +9,9 @@ gem 'neat'
 gem 'coffee-script'
 gem "therubyracer"
 gem 'dm-core'
-gem 'dm-migrations'
-gem 'dm-sqlite-adapter'
 gem 'puma'
+gem 'pg', group: :production
+gem 'dm-postgres-adapter', group: :production
+gem 'dm-migrations'
+gem 'dm-sqlite-adapter', group: :development
 

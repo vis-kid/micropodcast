@@ -12,9 +12,9 @@ require 'sinatra'
 require 'puma'
 
 configure do
+	enable :sessions
   set :server, :puma 
   set :session_secret, '50me 5ecret Matr1ck5 next level 5h1t'
-	enable :sessions
 end
 
 get('/javascripts/application.js'){ coffee :application }
