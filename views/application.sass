@@ -5,7 +5,7 @@
 
 $red: #D21A2E
 $nav_bg_color: #E24A5E
-$dark_grey: #1F1F1F
+$dark_grey: #292929
 $light_green: #A9D34C
 $white_background: white
 
@@ -65,7 +65,7 @@ header
 .iframe_container a, .iframe_transparent_container a,  nav a
   text-decoration: none
 
-.iframe_container a, .iframe_transparent_container a, .episode_title, .episode_sub_title, .episode_form_header, #main_subheader
+.iframe_container a, .iframe_transparent_container a, .episode_title, .episode_form_header, #main_subheader
   color: $dark_grey
 
 body, #global_bg, .knowledge_bomb_section
@@ -148,22 +148,25 @@ p
 
 iframe
   +span-columns(8)
-  margin-top: 10px
+  margin-top: 15px
 
 .episode_title
-  padding-top: 30px
-  padding-bottom: 8px
+  padding-top: 38px
+  //padding-bottom: 0px
   line-height: 1.2em
+  font-size: 27px
 
 .interviewee_name_link
   color: red
 
 .episode_sub_title
-  margin-top: 15px
-  font-size: 18px
+  margin-top: 10px
+  font-size: 14px
+  color: lighten($dark_grey, 40%)
 
 .episode_sub_title span
   color: $red
+  font-size: 20px
 
 footer
   height: 324px
