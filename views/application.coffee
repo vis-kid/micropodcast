@@ -10,10 +10,11 @@
   pathname = window.location.pathname	
 
   show_home = ->
-    main_header.css('cursor':'pointer').text('BACK TO HOMEPAGE')
+    main_header.css('cursor':'pointer', 'color': '#292929', 'opacity': '.5').text('«« BACK TO HOMEPAGE').fadeTo(400, 1)
 
   show_title = ->
-    main_header.css('cursor':'pointer').text('BETWEEN | SCREENS')
+    main_header.css('cursor':'pointer', 'color': 'white', 'opacity': '0.5').text('BETWEEN | SCREENS').fadeTo(200, 1) 
 
   main_header.hover(show_home, show_title) unless pathname == '/'
 )()
+
