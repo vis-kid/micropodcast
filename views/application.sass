@@ -231,3 +231,23 @@ footer
 #login_form [type="submit"]
   +button($light_green)
   margin-top: 10px
+
+#faq_background
+  +span-columns(12)
+  background: rgba(white, 1)
+  padding-top: 50px
+
+.faq, #faq_background p
+  +shift(2)
+  +span-columns(8)
+
+.faq
+  font-size: 27px
+  color: $dark_grey
+  margin-bottom: 10px
+  line-height: 1.2em
+
+#faq_background p
+  font-size: 20px
+  color: lighten($dark_grey, 5%) 
+  margin-bottom: 30px
