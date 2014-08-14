@@ -1,9 +1,16 @@
 @import 'bourbon/bourbon'
 @import 'neat/neat'
 
+//@font-faces
+
++font-face(GothamXLight, '/fonts/GothamXLight/gothamcond-xlight')
+
 // VARIABLES
 
-$red: #D21A2E
+//$red: #D21A2E
+//$red: #F81921
+//$red: #F0141E
+$red: #FB292D
 $nav_bg_color: #E24A5E
 $dark_grey: #292929
 $light_green: #A9D34C
@@ -47,7 +54,7 @@ nav li, nav a, #main_header, #list_view li
   color: white
 
 header
-  background: rgba($red, .83)
+  background: rgba($red, .80)
 
 .knowledge_bomb_section
   background: rgba($red, .77)
@@ -117,10 +124,10 @@ p
 // Header
 
 #main_header
-  font-family: $helvetica
+  font-family: GothamXLight, $helvetica
   margin-top: 85px
   margin-left: -7px
-  font-size: 60px
+  font-size: 100px
 
 #main_header a
   color: white
@@ -168,14 +175,14 @@ iframe
   color: red
 
 .episode_sub_title
-  font-family: $helvetica
+  font-family: GothamXLight, $helvetica
   margin-top: 10px
-  font-size: 14px
+  font-size: 25px
   color: lighten($dark_grey, 40%)
 
 .episode_sub_title span
   color: $red
-  font-size: 20px
+  font-size: 25px
 
 footer
   height: 324px
