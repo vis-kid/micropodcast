@@ -39,6 +39,12 @@ footer, .white_layer, .shownote_container, .episode_form_container, .episode_for
 #show_notes_display
   +span-columns(8)
   font-weight: normal
+  
+#show_notes_display a
+  color: $red
+  text-decoration: none
+  &:hover
+    border-bottom: 1px solid $red
 
 .input_label, .input_field, .episode_form_header, #wysihtml5-textarea
   +shift(1)
