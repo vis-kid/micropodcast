@@ -18,3 +18,7 @@
   main_header.hover(show_home, show_title) unless pathname == '/'
 )()
 
+
+editor = new wysihtml5.Editor("wysihtml5-textarea", { 
+  toolbar:      "wysihtml5-toolbar", 
+  parserRules:  wysihtml5ParserRules })

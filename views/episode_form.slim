@@ -33,10 +33,26 @@
                       name='episode[released_on]' 
                       value="#{@episode.released_on.strftime("%m/%d/%Y") if @episode.released_on}" ]
 
+#wysihtml5-toolbar style=("display: none;") 
+  a data-wysihtml5-command="bold"  bold
+  a data-wysihtml5-command="italic"  italic
+  a data-wysihtml5-command="createLink"  insert link
+  div data-wysihtml5-dialog="createLink" style=("display: none;") 
+    label
+      | Link:
+      input.text data-wysihtml5-dialog-field="href" value="http://" 
+    a data-wysihtml5-dialog-action="save"  OK
+    a data-wysihtml5-dialog-action="cancel"  Cancel
+
 .input_label
   label for='show_notes' Show Notes:
 .input_textarea_field
-  textarea#show_notes_input name='episode[show_notes]' =@episode.show_notes
+  textarea#wysihtml5-textarea name='episode[show_notes]' =@episode.show_notes
 
+//show_notes_input
 .input_label
-  input type='submit' value='Save Episode'
+      input type='submit' value='Save Episode'
+
+
+script src="/advanced.js" type="text/javascript"
+script src="/wysihtml5-0.3.0.min.js" type="text/javascript"
