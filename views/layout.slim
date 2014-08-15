@@ -1,0 +1,18 @@
+doctype 5
+html lang='en'
+  head
+
+    == slim :head
+
+  body
+    #global_bg
+      header
+        .white_line
+        == slim :navigation
+        == slim :main_headers
+      section
+        == yield
+      footer
+        == slim :paginate_space
+== slim :post_dom_loading_scripts
+
