@@ -1,14 +1,8 @@
 @import 'bourbon/bourbon'
 @import 'neat/neat'
+@import 'typefaces'
 
-//@font-faces
-
-+font-face(GothamNarrowBook, '/fonts/GothamNarrowBook/gothamnarrow-book')
-+font-face(GothamRoundBook, '/fonts/GothamRoundBook/gothamrnd-book')
-+font-face(GothamXLight, '/fonts/GothamXLight/gothamcond-xlight')
-+font-face(CallunaRegular, '/fonts/CallunaRegular/Calluna-Regular-webfont')
-
-// VARIABLES
+// COLOR VARIABLES
 
 //$red: #D21A2E
 //$red: #F81921
@@ -19,6 +13,38 @@ $dark_grey: #292929
 $light_green: #A9D34C
 $white_background: white
 $main_subheader_color: #252525
+
+
+#show_notes_display a, .interviewee_name_link, .episode_sub_title span
+  color: $red
+
+// EXTENDS
+
+%SansSerif_GothamRoundbook_Helvetica
+  font-family: GothamRoundBook, $helvetica 
+
+%Serif_Text_Type_Georgia
+  font-family: CallunaRegular, $georgia
+
+// COLUMNS
+
+footer, .white_layer, .shownote_container, .episode_form_container, .episode_form_container input, #button_container, #faq_background
+  +span-columns(12)
+
+.input_label, .input_field, #wysihtml5-textarea 
+  +span-columns(10)
+
+#show_notes_display, iframe, #show_notes_headline, .faq, #faq_background p
+  +span-columns(8)
+
+// SHIFT
+
+.input_label, .input_field, .episode_form_header, #wysihtml5-textarea
+  +shift(1)
+
+.episode_title, .episode_sub_title, iframe, .faq, #show_notes_display, #faq_background p, #show_notes_headline
+  +shift(2)
+
 // Reset
 
 *
@@ -30,28 +56,6 @@ $main_subheader_color: #252525
 //header, .global_bg, .white_line, .knowledge_bomb_section
   +span-columns(12)
 
-footer, .white_layer, .shownote_container, .episode_form_container, .episode_form_container input
-  +span-columns(12)
-
-.input_label, .input_field, #wysihtml5-textarea 
-  +span-columns(10)
-
-#show_notes_display
-  +span-columns(8)
-  font-weight: normal
-  
-#show_notes_display a
-  color: $red
-  text-decoration: none
-  &:hover
-    border-bottom: 1px solid $red
-
-.input_label, .input_field, .episode_form_header, #wysihtml5-textarea
-  +shift(1)
-
-.episode_title, .episode_sub_title, iframe, #show_notes_display
-  +shift(2)
-
 header, .knowledge_bomb_section
   border-radius: 2px
 
@@ -59,7 +63,7 @@ header, .knowledge_bomb_section
   text-align: center
   font-weight: normal
 
-nav li, nav a, #main_header, #list_view li
+nav li, nav a, #main_header, #list_view li, #main_header a
   color: white
 
 header
@@ -74,14 +78,16 @@ header
 .iframe_container, .paginate_space, .shownote_container, .white_line
   background: $white_background
 
-.iframe_container, .iframe_transparent_container
+.iframe_container, .iframe_transparent_container, .knowledge_bomb_section, footer
   height: 324px
+
+.iframe_container, .iframe_transparent_container, .knowledge_bomb_section
   margin-top: 1px
 
 .iframe_container a, .iframe_transparent_container a,  nav a
   text-decoration: none
 
-.iframe_container a, .iframe_transparent_container a, .episode_title, .episode_form_header
+.iframe_container a, .iframe_transparent_container a, .episode_title, .episode_form_header, #show_notes_headline, .faq
   color: $dark_grey
 
 body, #global_bg, .knowledge_bomb_section
@@ -90,7 +96,6 @@ body, #global_bg, .knowledge_bomb_section
 // SELECTORS
 
 body
-  font-family: $lucida-grande
   line-height: 24px
 
 .white_line
@@ -105,20 +110,19 @@ nav ul #list_view
   +clearfix
 
 nav li
-  display: inline-block
   +transition(all 0.01s ease-in-out)
+  display: inline-block
   float: right
-  padding-top: 5px
-  padding-bottom: 5px
+  padding: 5px 5px 
   &:hover
     background-color: shade(white, 2%)
     a
       color: $red
 
 nav a
+  @extend %SansSerif_GothamRoundbook_Helvetica
   font-size: 20px
   padding: 5px 35px 5px 35px
-  font-family: GothamRoundBook, $helvetica 
 
 // Boxes / Layout
 
@@ -131,40 +135,41 @@ p
   font-size: 15px
   margin-bottom: 24px
 
-
 // Header
 
 #main_header
-  font-family: GothamXLight, $helvetica
-  margin-top: 85px
-  margin-left: -14px
-  font-size: 100px
+  font:
+    family: GothamXLight, $helvetica
+    size: 100px
+  margin:
+    top: 85px
+    left: -14px
 
 #main_header a
-  color: white
-  text-decoration: none
   cursor: default
+  text-decoration: none
 
 #main_subheader
-  font-family: GothamRoundBook, $helvetica
+  @extend %SansSerif_GothamRoundbook_Helvetica
   color: $main_subheader_color
   margin-top: 49px
-  padding-left: 38px
+  padding-left: 39px
 
 .knowledge_bomb_section
-  height: 324px 
   margin-top: -63px
 
 .bomb_icon
   +transform(rotate(75.6deg))
   opacity: .97
   display: block
-  margin-left: auto
-  margin-right: auto
   height: 55%
-  margin-top: 65px
-  padding-top: 4px
-  padding-left: 110px
+  margin:
+    top: 65px
+    left: auto
+    right: auto
+  padding:
+    top: 4px
+    left: 110px
 
 #podcast_container li
   list-style-type: none
@@ -173,36 +178,31 @@ p
   background: rgba(white, .978)
 
 iframe
-  +span-columns(8)
   margin-top: 13px
 
 .episode_title
+  +clearfix
   font-family: GothamNarrowBook, $helvetica 
-  padding-top: 38px
-  //padding-bottom: 0px
-  line-height: 1.2em
   font-size: 30px
-    
+  line-height: 1.2em
+  padding-top: 28px
+
 .episode_title a
+  +span-columns(11)
   +transition(all 0.1s ease-in-out-back)
   &:hover
     color: lighten($dark_grey, 40%)
 
-.interviewee_name_link
-  color: red
-
 .episode_sub_title
-  font-family: GothamRoundBook, $helvetica
+  @extend %SansSerif_GothamRoundbook_Helvetica
   margin-top: 7px
   font-size: 18px
   color: lighten($dark_grey, 40%)
 
 .episode_sub_title span
-  color: $red
-  font-size: 20px
+  font-size: 18px
 
 footer
-  height: 324px
   background: rgba($red, .0005)
 
 .paginate_space
@@ -213,34 +213,49 @@ footer
 
 .episode_form_container input
   height: 40px
-  margin-top: 5px
-  margin-bottom: 40px
+  margin:
+    top: 5px
+    bottom: 40px
 
 .episode_form_container input[type="submit"]
   +span_columns(2)
   +button($light_green)
+
+.episode_form_container label
+  @extend %SansSerif_GothamRoundbook_Helvetica
   
 .episode_form_header
-  font-family: $helvetica
-  margin-top: 20px
-  margin-bottom: 20px
+  @extend %SansSerif_GothamRoundbook_Helvetica
   font-size: 30px
+  margin:
+    top: 20px
+    bottom: 20px
 
 #wysihtml5-textarea
   height: 500px
   margin-bottom: 30px
   border: 3px solid shade(white, 10%)
-  
+
 #show_notes_display
-  font-family: CallunaRegular, $georgia
-  margin-top: 50px
-  line-height: 1.5em
-  font-size: 27px
   white-space: pre-wrap
+  @extend %Serif_Text_Type_Georgia
+  font-size: 27px
+  line-height: 1.5em
+  font-weight: normal
   color: tint($dark_grey, 5%)
+  margin-top: 45px
+
+#show_notes_display a
+  text-decoration: none
+  &:hover
+    border-bottom: 1px solid $red
+  
+#show_notes_headline
+  @extend %SansSerif_GothamRoundbook_Helvetica
+  font-size: 24px
+  margin-top: 30px
 
 #button_container
-  +span-columns(12)
   margin-top: 2px
 
 //.shownote_container input[type="submit"]
@@ -260,8 +275,9 @@ footer
 
 #login_username, #login_password
   display: block
-  margin-top: 5px
-  margin-bottom: 15px
+  margin:
+    top: 5px
+    bottom: 15px
   width: 300px
   height: 40px
 
@@ -270,26 +286,17 @@ footer
   margin-top: 10px
 
 #faq_background
-  +span-columns(12)
   background: rgba(white, 1)
   padding-top: 50px
 
-.faq, #faq_background p
-  +shift(2)
-  +span-columns(8)
-
 .faq
-  font-family: GothamRoundBook, $helvetica
+  @extend %SansSerif_GothamRoundbook_Helvetica
   font-size: 30px
   line-height: 1.3em
-  color: $dark_grey
 
 #faq_background p
-  font-family: CallunaRegular, $georgia
-  font-size: 27px
+  @extend %Serif_Text_Type_Georgia
+  font-size: 24px
+  line-height: 1.3em
   color: lighten($dark_grey, 20%) 
   margin-bottom: 40px
-  line-height: 1.3em
-
-
-
