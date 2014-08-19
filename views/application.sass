@@ -28,13 +28,13 @@ $main_subheader_color: #252525
 
 // COLUMNS
 
-footer, .white_layer, .shownote_container, .episode_form_container, .episode_form_container input, #button_container, #faq_background
+.iframe_container, .iframe_transparent_container, footer, .white_layer, .shownote_container, .episode_form_container, .episode_form_container input, #button_container, #faq_background
   +span-columns(12)
 
 .input_label, .input_field, #wysihtml5-textarea 
   +span-columns(10)
 
-#show_notes_display, iframe, #show_notes_headline, .faq, #faq_background p
+iframe, #show_notes_display, #show_notes_headline, .faq, #faq_background p
   +span-columns(8)
 
 // SHIFT
@@ -52,9 +52,6 @@ footer, .white_layer, .shownote_container, .episode_form_container, .episode_for
   margin: 0
 
 // REFACTORINGS
-
-//header, .global_bg, .white_line, .knowledge_bomb_section
-  +span-columns(12)
 
 header, .knowledge_bomb_section
   border-radius: 2px
@@ -78,7 +75,7 @@ header
 .iframe_container, .paginate_space, .shownote_container, .white_line
   background: $white_background
 
-.iframe_container, .iframe_transparent_container, .knowledge_bomb_section, footer
+.knowledge_bomb_section, footer
   height: 324px
 
 .iframe_container, .iframe_transparent_container, .knowledge_bomb_section
@@ -146,7 +143,7 @@ p
     size: 100px
   margin:
     top: 85px
-    left: -14px
+    left: -11px
 
 #main_header a
   cursor: default
@@ -156,10 +153,7 @@ p
   @extend %SansSerif_GothamRoundbook_Helvetica
   color: $main_subheader_color
   margin-top: 49px
-  padding-left: 39px
-
-.knowledge_bomb_section
-  margin-top: -63px
+  padding-left: 41px
 
 .bomb_icon
   +transform(rotate(75.6deg))
@@ -167,12 +161,15 @@ p
   display: block
   height: 55%
   margin:
-    top: 65px
+    top: 2px
     left: auto
     right: auto
   padding:
     top: 4px
     left: 110px
+
+#podcast_container 
+  +outer-container
 
 #podcast_container li
   list-style-type: none
@@ -182,16 +179,17 @@ p
 
 iframe
   margin-top: 13px
+  margin-bottom: 40px
 
 .episode_title
   +clearfix
   font-family: GothamNarrowBook, $helvetica 
-  font-size: 30px
-  line-height: 1.2em
-  padding-top: 28px
+  font-size: 27px
+  line-height: 1.3em
+  padding-top: 38px
 
 .episode_title a
-  +span-columns(11)
+  +span-columns(9.6)
   +transition(all 0.1s ease-in-out-back)
   &:hover
     color: lighten($dark_grey, 40%)
@@ -261,7 +259,6 @@ footer
 #button_container
   margin-top: 2px
 
-//.shownote_container input[type="submit"]
 #delete_button input[type="submit"]
   +button(red)
 
