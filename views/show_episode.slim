@@ -5,7 +5,7 @@
       input type="hidden" name="_method" value="DELETE"
       input type="submit" value="Delete episode"
 
-.shownote_container 
+#shownote_container 
   h2.episode_title #{ @episode.title }
   h3.episode_sub_title <span> #{ @episode.interviewee_name } </span> | #{ @episode.length }  Mintues | #{ @episode.released_on } | Episode ##{ @episode.id }  
   iframe [ width="100%" 

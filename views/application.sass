@@ -33,14 +33,15 @@ $main_subheader_color: #252525
 
 // COLUMNS
 
-.iframe_container, .iframe_transparent_container, footer, .white_layer, .shownote_container, .episode_form_container, .episode_form_container input, #button_container, #faq_background
+.iframe_container, .iframe_transparent_container, footer, .white_layer, #shownote_container, .episode_form_container, .episode_form_container input, #button_container, #faq_background
   +span-columns(12)
 
 .input_label, .input_field, #wysihtml5-textarea 
   +span-columns(10)
 
-iframe, #show_notes_display, #show_notes_headline, .faq, #faq_background p
+iframe, #show_notes_display, #show_notes_headline, .faq, #faq_background p, #shownote_container .episode_title, #shownote_container .episode_sub_title
   +span-columns(8)
+
 
 // SHIFT
 
@@ -71,7 +72,7 @@ nav li, nav a, #main_header, #list_view li, #main_header a
 #button_container, #login_form
   background: rgba(white, 0.85)
 
-.iframe_container, .paginate_space, .shownote_container, .white_line
+.iframe_container, .paginate_space, #shownote_container, .white_line
   background: $white_background
 
 .knowledge_bomb_section, footer
