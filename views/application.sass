@@ -1,12 +1,5 @@
-@import 'bourbon/bourbon'
-@import 'neat/neat'
-@import 'typefaces'
-
 // COLOR VARIABLES
 
-//$red: #D21A2E
-//$red: #F81921
-//$red: #F0141E
 $red: #FB292D
 $nav_bg_color: #E24A5E
 $dark_grey: #292929
@@ -14,6 +7,18 @@ $light_green: #A9D34C
 $white_background: white
 $main_subheader_color: #252525
 
+@import 'bourbon/bourbon'
+@import 'neat/neat'
+
+@import 'typefaces'
+@import 'header'
+@import 'navigation'
+@import 'episode_styles'
+@import 'show_notes'
+@import 'login'
+@import 'episode_form'
+@import 'faqs'
+@import 'footer'
 
 #show_notes_display a, .interviewee_name_link, .episode_sub_title span
   color: $red
@@ -63,12 +68,6 @@ header, .knowledge_bomb_section
 nav li, nav a, #main_header, #list_view li, #main_header a
   color: white
 
-header
-  background: rgba($red, .83)
-
-.knowledge_bomb_section
-  background: rgba($red, .80)
-
 #button_container, #login_form
   background: rgba(white, 0.85)
 
@@ -98,32 +97,6 @@ body, #global_bg, .knowledge_bomb_section
 body
   line-height: 24px
 
-.white_line
-  height: 2px
-
-// Navigation
-
-header
-  height: 200px
-
-nav ul #list_view 
-  +clearfix
-
-nav li
-  +transition(all 0.01s ease-in-out)
-  display: inline-block
-  float: right
-  padding: 5px 5px 
-  &:hover
-    background-color: shade(white, 2%)
-    a
-      color: $red
-
-nav a
-  @extend %SansSerif_GothamRoundbook_Helvetica
-  font-size: 20px
-  padding: 5px 35px 5px 35px
-
 // Boxes / Layout
 
 #content
@@ -134,169 +107,3 @@ nav a
 p
   font-size: 15px
   margin-bottom: 24px
-
-// Header
-
-#main_header
-  font:
-    family: GothamXLight, $helvetica
-    size: 100px
-  margin:
-    top: 85px
-    left: -11px
-
-#main_header a
-  cursor: default
-  text-decoration: none
-
-#main_subheader
-  @extend %SansSerif_GothamRoundbook_Helvetica
-  color: $main_subheader_color
-  margin-top: 49px
-  padding-left: 41px
-
-.bomb_icon
-  +transform(rotate(75.6deg))
-  opacity: .97
-  display: block
-  height: 55%
-  margin:
-    top: 2px
-    left: auto
-    right: auto
-  padding:
-    top: 4px
-    left: 110px
-
-#podcast_container 
-  +outer-container
-
-#podcast_container li
-  list-style-type: none
-
-.iframe_transparent_container
-  background: rgba(white, .978)
-
-iframe
-  margin-top: 13px
-  margin-bottom: 40px
-
-.episode_title
-  +clearfix
-  font-family: GothamNarrowBook, $helvetica 
-  font-size: 27px
-  line-height: 1.3em
-  padding-top: 38px
-
-.episode_title a
-  +span-columns(9.6)
-  +transition(all 0.1s ease-in-out-back)
-  &:hover
-    color: lighten($dark_grey, 40%)
-
-.episode_sub_title
-  @extend %SansSerif_GothamRoundbook_Helvetica
-  margin-top: 7px
-  font-size: 18px
-  color: lighten($dark_grey, 40%)
-
-.episode_sub_title span
-  font-size: 18px
-
-footer
-  background: rgba($red, .0005)
-
-.paginate_space
-  height: 200px
-  
-.episode_form_container
-  background: rgba(white, .90)
-
-.episode_form_container input
-  height: 40px
-  margin:
-    top: 5px
-    bottom: 40px
-
-.episode_form_container input[type="submit"]
-  +span_columns(2)
-  +button($light_green)
-
-.episode_form_container label
-  @extend %SansSerif_GothamRoundbook_Helvetica
-  
-.episode_form_header
-  @extend %SansSerif_GothamRoundbook_Helvetica
-  font-size: 30px
-  margin:
-    top: 20px
-    bottom: 20px
-
-#wysihtml5-textarea
-  height: 500px
-  margin-bottom: 30px
-  border: 3px solid shade(white, 10%)
-
-#show_notes_display
-  white-space: pre-wrap
-  @extend %Serif_Text_Type_Georgia
-  font-size: 27px
-  line-height: 1.5em
-  font-weight: normal
-  color: tint($dark_grey, 5%)
-  margin-top: 45px
-
-#show_notes_display a
-  text-decoration: none
-  &:hover
-    border-bottom: 1px solid $red
-  
-#show_notes_headline
-  @extend %SansSerif_GothamRoundbook_Helvetica
-  font-size: 24px
-  margin-top: 30px
-
-#button_container
-  margin-top: 2px
-
-#delete_button input[type="submit"]
-  +button(red)
-
-#edit_button 
-  +button
-  width: 190px
-  margin-bottom: 5px
-
-#login_form
-  padding-top: 20px
-
-#login_form label
-  margin-top: 200px
-
-#login_username, #login_password
-  display: block
-  margin:
-    top: 5px
-    bottom: 15px
-  width: 300px
-  height: 40px
-
-#login_form [type="submit"]
-  +button($light_green)
-  margin-top: 10px
-
-#faq_background
-  background: rgba(white, 1)
-  padding-top: 50px
-
-.faq
-  @extend %SansSerif_GothamRoundbook_Helvetica
-  font-size: 27px
-  line-height: 1.3em
-
-#faq_background p
-  @extend %Serif_Text_Type_Georgia
-  font-size: 24px
-  line-height: 1.3em
-  color: lighten($dark_grey, 26%) 
-  margin-bottom: 40px

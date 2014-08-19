@@ -1,0 +1,39 @@
+.episode_form_container
+  background: rgba(white, .90)
+
+.episode_form_container input
+  height: 40px
+  margin:
+    top: 5px
+    bottom: 40px
+
+.episode_form_container input[type="submit"]
+  +span_columns(2)
+  +button($light_green)
+
+.episode_form_container label
+  @extend %SansSerif_GothamRoundbook_Helvetica
+  
+.episode_form_header
+  @extend %SansSerif_GothamRoundbook_Helvetica
+  font-size: 30px
+  margin:
+    top: 20px
+    bottom: 20px
+
+#wysihtml5-textarea
+  height: 500px
+  margin-bottom: 30px
+  border: 3px solid shade(white, 10%)
+
+#button_container
+  margin-top: 2px
+
+#delete_button input[type="submit"]
+  +button(red)
+
+#edit_button 
+  +button
+  width: 190px
+  margin-bottom: 5px
+

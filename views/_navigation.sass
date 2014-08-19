@@ -1,0 +1,17 @@
+nav ul #list_view 
+  +clearfix
+
+nav li
+  +transition(all 0.01s ease-in-out)
+  display: inline-block
+  float: right
+  padding: 5px 5px 
+  &:hover
+    background-color: shade(white, 2%)
+    a
+      color: $red
+
+nav a
+  @extend %SansSerif_GothamRoundbook_Helvetica
+  font-size: 20px
+  padding: 5px 35px 5px 35px
