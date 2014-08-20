@@ -10,19 +10,15 @@ html lang='en'
         .white_line
 
         == slim :navigation
-
         == slim :main_headers
 
       .knowledge_bomb_section
         img.bomb_icon src="/images/knowledge_bomb.png" alt="Knowledge Bomb Icon" /
 
       section
-
         == yield
-
-      footer
-
         == slim :paginate_space
+      footer
 
 == slim :post_dom_loading_scripts
 
