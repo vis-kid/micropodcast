@@ -6,13 +6,17 @@ html lang='en'
 
   body
     #global_bg
+
       header
+
         .white_line
         == slim :navigation
         == slim :main_headers
+
       section
         == yield
-        == slim :paginate_space
+
+      == slim :paginate_space
       footer
-    == slim :post_dom_loading_scripts
+== slim :post_dom_loading_scripts
 
