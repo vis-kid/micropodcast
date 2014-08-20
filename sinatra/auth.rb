@@ -6,12 +6,12 @@ module Sinatra
 
       def authorized?
         session[:admin]
-			end
+      end
 
       def protected!
         halt 401, slim(:unauthorized) unless authorized?
-			end
-		end
+      end
+    end
     
     def self.registered(app)
       app.helpers Helpers
@@ -22,23 +22,23 @@ module Sinatra
               password: 'Micropodcast'
      
       app.get '/lllogin' do
-				slim :login
-			end
+        slim :login
+      end
 
       app.post '/lllogin' do
-				if params[:username] == settings.username && params[:password] == settings.password
+        if params[:username] == settings.username && params[:password] == settings.password
           session[:admin] = true
           redirect to('/')
-				else
+        else
           redirect to('/lllogin')
-				end
-			end
+        end
+      end
 
       app.get '/logout' do
         session[:admin] = nil
         redirect to('/')
-			end
-		end
-	end
+      end
+    end
+  end
   register Auth
 end
