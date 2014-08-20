@@ -2,14 +2,19 @@
   background: rgba(white, 1)
   padding-top: 50px
 
+.faq, #faq_background p
+  +span-columns(7)
+  +shift(2.5)
+
 .faq
   @extend %SansSerif_GothamRoundbook_Helvetica
-  font-size: 27px
+  font-size: 28px
   line-height: 1.3em
+  margin-bottom: 2px
 
 #faq_background p
   @extend %Serif_Text_Type_Georgia
   font-size: 24px
   line-height: 1.3em
   color: lighten($dark_grey, 26%) 
-  margin-bottom: 40px
+  margin-bottom: 55px
