@@ -1,6 +1,8 @@
 require './sinatra/auth'
 require 'v8'
 require 'coffee-script'
+require 'dm-core'
+require 'dm-migrations'
 require 'bundler/setup'
 require 'sinatra'
 require 'sinatra/reloader' if development?
@@ -10,6 +12,8 @@ require 'slim'
 require './episode.rb'
 require 'sinatra'
 require 'puma'
+require 'will_paginate'
+require 'will_paginate/data_mapper'
 
 configure do
 	enable :sessions
@@ -30,7 +34,7 @@ get('/application.css'){ sass :application }
 
 get '/' do
   @title = ' :home'
-  @episodes = Episode.all
+  @episodes = Episode.paginate(:page => params[:page], :per_page => 7)
   slim :home, layout: :knowledge_bomb_layout
 end
 

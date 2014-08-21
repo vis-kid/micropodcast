@@ -15,4 +15,7 @@ gem 'pg', group: :production
 gem 'dm-postgres-adapter', group: :production
 gem 'dm-migrations'
 gem 'dm-sqlite-adapter', group: :development
+gem 'padrino-helpers'
+gem 'dm-aggregates'
+gem 'will_paginate', '~> 3.0'
 
