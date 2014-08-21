@@ -32,11 +32,13 @@ end
 get('/javascripts/application.js'){ coffee :application }
 get('/application.css'){ sass :application }
 
+
 get '/' do
   @title = ' :home'
   @episodes = Episode.paginate(:page => params[:page], :per_page => 7)
   slim :home, layout: :knowledge_bomb_layout
 end
+
 
 get '/episodes/new' do
   protected!

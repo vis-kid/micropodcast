@@ -6,16 +6,18 @@
 )()
 
 (->
-  main_header = $('#main_header a')
-  pathname = window.location.pathname	
+  mainHeader = $('#main_header a')
+	#pathname = window.location.pathname	
+	#windowSearchString = window.location.search.substring()
 
   show_home = ->
-    main_header.css('cursor':'pointer', 'color': '#292929', 'opacity': '.5').text('«« BACK TO HOMEPAGE').fadeTo(300, 1)
+    mainHeader.css('cursor':'pointer', 'color': '#292929', 'opacity': '.5').text('«« BACK TO HOMEPAGE').fadeTo(300, 1)
 
   show_title = ->
-    main_header.css('cursor':'pointer', 'color': 'white', 'opacity': '0.5').text('BETWEEN | SCREENS').fadeTo(200, 1) 
+    mainHeader.css('cursor':'pointer', 'color': 'white', 'opacity': '0.5').text('BETWEEN | SCREENS').fadeTo(200, 1) 
 
-  main_header.hover(show_home, show_title) unless pathname == '/'
+  unless window.location.href == "http://localhost:9393/" or  window.location.href == "http://localhost:9393/?page=1"
+    mainHeader.hover(show_home, show_title) 
 )()
 
 
