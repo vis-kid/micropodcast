@@ -20,6 +20,16 @@
     mainHeader.hover(show_home, show_title) 
 )()
 
+(->
+  knowledgeBombSection = $('.knowledge_bomb_section')
+
+  if window.location.search.substring().match(/page=1/)    
+    knowledgeBombSection.show()
+  else if window.location.href == "http://localhost:9393/" 
+    knowledgeBombSection.show()
+  else
+    knowledgeBombSection.remove()
+)()
 
 editor = new wysihtml5.Editor("wysihtml5-textarea", { 
   toolbar:      "wysihtml5-toolbar", 
