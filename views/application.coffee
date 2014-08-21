@@ -16,7 +16,7 @@
   show_title = ->
     mainHeader.css('cursor':'pointer', 'color': 'white', 'opacity': '0.5').text('BETWEEN | SCREENS').fadeTo(200, 1) 
 
-  unless window.location.href == "http://localhost:9393/" or  window.location.href == "http://localhost:9393/?page=1"
+  unless window.location.href == "http://between-screens.herokuapp.com/" or  window.location.href == "http://between-screens.herokuapp.com/?page=1"
     mainHeader.hover(show_home, show_title) 
 )()
 
