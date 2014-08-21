@@ -1,10 +1,10 @@
-#faq_background
-  background: rgba(white, 1)
-  padding-top: 50px
-
 .faq, #faq_background p
   +span-columns(7)
   +shift(2.5)
+
+#faq_background
+  background: rgba(white, 1)
+  padding-top: 50px
 
 .faq
   @extend %SansSerif_GothamRoundbook_Helvetica
@@ -21,6 +21,8 @@
 
 #faq_background a
   text-decoration: none
+  @extend %SansSerif_GothamRoundbook_Helvetica
+  font-size: 21px
   color: $red
   &:hover
     border-bottom: 1px solid $red
