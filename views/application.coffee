@@ -25,7 +25,7 @@
 
   if window.location.search.substring().match(/page=1/)    
     knowledgeBombSection.show()
-  else if window.location.href == "http://localhost:9393/" 
+  else if window.location.href == "http://between-screens.herokuapp.com/" 
     knowledgeBombSection.show()
   else
     knowledgeBombSection.remove()
