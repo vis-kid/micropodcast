@@ -1,3 +1,6 @@
+.pagination a, .next_page, .previous_page
+  @extend %SansSerif_GothamRoundbook_Helvetica
+
 .pagination
   text-align: center
   height: 200px
@@ -5,7 +8,6 @@
   background: white
   a
     display: inline-block
-    @extend %SansSerif_GothamRoundbook_Helvetica
     color: $red
     text-decoration: none 
     padding-left: 15px
@@ -16,8 +18,6 @@
 .previous_page
   margin-right: 60px
   content: 'hello'
-  @extend %SansSerif_GothamRoundbook_Helvetica
 
 .next_page
   margin-left: 60px
-  @extend %SansSerif_GothamRoundbook_Helvetica
