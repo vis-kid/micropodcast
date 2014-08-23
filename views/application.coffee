@@ -6,6 +6,13 @@
 )()
 
 (->
+  tri = new Trianglify({ cellsize: 110, noiseIntensity: 0.0, x_gradient: [ '#9E030A', '#E42F3A',  '#9E030A' ] })
+  pattern = tri.generate(document.body.clientWidth, document.body.clientHeight)
+  footer_bg = document.getElementById('footer')
+  footer_bg.setAttribute('style', 'background-image: '+pattern.dataUrl)
+)()
+
+(->
   mainHeader = $('#main_header a')
 	#pathname = window.location.pathname	
 	#windowSearchString = window.location.search.substring()
