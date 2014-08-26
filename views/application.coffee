@@ -28,7 +28,7 @@
 )()
 
 (->
-  knowledgeBombSection = $('.knowledge_bomb_section')
+  knowledgeBombSection = $('#knowledge_bomb_section')
 
   if window.location.search.substring().match(/page=1/)    
     knowledgeBombSection.show()
