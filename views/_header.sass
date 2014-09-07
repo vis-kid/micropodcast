@@ -5,17 +5,34 @@ header
   height: 10rem
   //200px
   background: rgba($red, .84)
+  +media($xs)
+    height: 6.5rem
+  +media($med)
+    height: 7rem
+  +media($large)
+    height: 10rem
 
 #main_header
   font:
     family: GothamNarrowXLight, $helvetica
-    size: 3.5rem
-    //70px
-  margin:
-    top: 4.25rem
-    //85px
-    left: -0.40rem
     //-8px
+  +media($xs) 
+    font:
+      size: 2.7rem
+  margin:
+    top: 2rem
+  +media($small)
+    font:
+      size: 3.3rem
+  +media($med)
+    font-size: 4rem 
+  +media($large) 
+    font:
+      size: 3.5rem
+    //70px
+    margin:
+      top: 4.25rem
+    //85px
 
 header, #knowledge_bomb_section
   border-radius: 2px
@@ -27,30 +44,48 @@ header, #knowledge_bomb_section
 #main_subheader
   @extend %SansSerif_GothamRoundbook_Helvetica
   color: $main_subheader_color
-  margin-top: 2.15rem
-  //43px
-  padding-left: 2.05rem
-  //41px
-  font-size: 1.5rem
-  //30px
+  +media($xs)
+    padding-left: 1.58rem
+    margin-top: 1.1rem
+    font-size: 1.5rem
+  +media($small)
+    font-size: 1.65rem
+    padding-left: 2rem
+  +media($med)
+    font-size: 2rem
+    padding-left: 2.2rem
+    margin-top: 1.6rem
+  +media($large)
+    padding-left: 2.5rem
+    margin-top: 2.15rem
+    font-size: 1.5rem
 
 #knowledge_bomb_section
   background: rgba($red, .80)
   height: 16.2rem
   //324px
+  +media($xs)
+    height: 10rem
+  +media($med)
+    height: 12rem
+  +media($large)
+    height: 16.2rem
 
 .bomb_icon
-  +transform(rotate(75.6deg))
-  opacity: .97
-  display: block
-  height: 55%
+  opacity: 0.85
   margin:
-    top: 0.1rem
+    top: 0.5rem
     //2px
-    left: auto
-    right: auto
   padding:
     top: 0.2rem
     //4px
     left: 5.5rem
     //110px
+  +media($xs)
+    +span-columns(2)
+    padding-left: 0.6rem
+    height: 87%
+  +media($med)
+    padding-left: 0.9rem
+  +media($large)
+    padding-left: 1.1rem
