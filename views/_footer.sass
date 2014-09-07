@@ -44,7 +44,15 @@ footer a
     a
       color: rgba(white, .3)
       text-decoration: none
+      display: block
       font-size: 0.8rem
     &:hover
       span
         color: rgba(white, 1)
+
+#footer h6 a
+  +media($xs)
+    display: none
+  +media($large)
+    display: block
+
