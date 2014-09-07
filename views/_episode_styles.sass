@@ -13,31 +13,48 @@ iframe
   margin-bottom: 2rem
   //40px
 
+iframe, .episode_title, .episode_sub_title
+  +media($xs)
+    +span-columns(1.78)
+    +shift(0.11)
+  +media($large)
+    +span-columns(8)
+    +shift(2)
+
 .episode_title
   +clearfix
   text-rendering: optimizeLegibility
-  font-family: GothamNarrowBook, $helvetica 
-  font-size: 1.45rem
-  //29px
-  line-height: 1.885rem
+  padding-top: 1.85rem
+  a
+    +transition(all 0.1s ease-in-out-back)
+    &:hover
+      color: lighten($dark_grey, 40%)
+  +media($xs)
+    font-family: $helvetica 
+    font-size: 1.75rem 
+    line-height: 1.5rem
+    font-weight: 400
+  +media($small)
+    font-weight: 500
+  +media($large)
+    font-family: GothamNarrowBook, $helvetica 
+    font-size: 1.45rem 
+    //29px
+    line-height: 1.885rem
   //1.3em
-  padding-top: 1.9rem
-  //38px
 
-.episode_title a
-  +span-columns(9.6)
-  +transition(all 0.1s ease-in-out-back)
-  &:hover
-    color: lighten($dark_grey, 40%)
-
-.episode_sub_title
-  @extend %SansSerif_GothamRoundbook_Helvetica
-  margin-top: 0.35rem
-  //7px
-  font-size: 0.9rem
-  //18px
+.episode_sub_title, .episode_sub_title span
   color: lighten($dark_grey, 40%)
+  //7px
+  +media($xs)
+    font-family: $helvetica
+    line-height: 1.2rem
+    font-size: 0.2rem
+    font-weight: normal
+    margin-top: 0.45rem
+  +media($large)
+    margin-top: 0.35rem
+    font-family: GothamRoundBook, $helvetica
+    font-size: 0.9rem
+    //18px
 
-.episode_sub_title span
-  font-size: 0.9rem
-  //18px
