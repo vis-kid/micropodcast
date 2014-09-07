@@ -1,6 +1,3 @@
-html
-  font-size: 20px
-
 // COLOR VARIABLES
 
 $red: #FB292D
@@ -25,6 +22,14 @@ $main_subheader_color: #252525
 @import 'pagination'
 @import 'footer'
 
+html
+  font-size: 20px
+  +media($xs)
+    font-size: 14px
+  +media($large)
+    font-size: 20px
+
+
 #show_notes_display a, .interviewee_name_link, .episode_sub_title span
   color: $red
 
@@ -44,18 +49,15 @@ $main_subheader_color: #252525
 .input_label, .input_field, #wysihtml5-textarea 
   +span-columns(10)
 
-iframe, #show_notes_display, #show_notes_headline, #shownote_container .episode_title, #shownote_container .episode_sub_title
-  +span-columns(8)
-
-
 // SHIFT
 
 .input_label, .input_field, .episode_form_header, #wysihtml5-textarea
   +shift(1)
 
-.episode_title, .episode_sub_title, iframe, #show_notes_display, #show_notes_headline
+#show_notes_display, #show_notes_headline
   +shift(2)
-
+  +media($xs) 
+    +shift(0.3)
 // Reset
 
 *
