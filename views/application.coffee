@@ -44,5 +44,7 @@ editor = new wysihtml5.Editor("wysihtml5-textarea", {
   parserRules:  wysihtml5ParserRules })
 
 
-knowledgeBombSection = $('#knowledge_bomb_section')
-knowledgeBombSection.remove() 
+(->
+  knowledgeBombSection = $('#knowledge_bomb_section')
+  knowledgeBombSection.remove() 
+)()
