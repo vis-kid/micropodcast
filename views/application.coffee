@@ -47,5 +47,5 @@ editor = new wysihtml5.Editor("wysihtml5-textarea", {
 
 (->
   knowledgeBombSection = $('#knowledge_bomb_section')
-	knowledgeBombSection.hover(alert('hello'))
+	knowledgeBombSection.click(alert('hello'))
 )()
