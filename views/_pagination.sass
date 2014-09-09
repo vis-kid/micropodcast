@@ -1,5 +1,9 @@
-.pagination a, .next_page, .previous_page
+.pagination a, .next_page, .previous_page, .current
   @extend %SansSerif_GothamRoundbook_Helvetica
+  text-rendering: optimizeLegibility
+
+.previous_page, .current, .next_page 
+  color: $dark_grey
 
 .pagination
   text-align: center
