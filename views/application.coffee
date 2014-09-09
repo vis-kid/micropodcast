@@ -27,6 +27,8 @@
     mainHeader.hover(show_home, show_title) 
 )()
 
+
+
 (->
   knowledgeBombSection = $('#knowledge_bomb_section')
 
@@ -41,3 +43,9 @@
 editor = new wysihtml5.Editor("wysihtml5-textarea", { 
   toolbar:      "wysihtml5-toolbar", 
   parserRules:  wysihtml5ParserRules })
+
+
+(->
+  knowledgeBombSection = $('#knowledge_bomb_section')
+	knowledgeBombSection.hide()
+)()
