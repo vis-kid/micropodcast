@@ -1,3 +1,10 @@
+#main_header, #main_subheader
+  text-align: center
+  font-weight: normal
+  
+#main_header, #main_header a
+  color: white
+
 .white_line
   height: 2px
 
@@ -6,21 +13,25 @@ header
   //200px
   background: rgba($red, .84)
   +media($xs)
+  //height: 6.5rem
   +media($small)
+  // height: 7rem
   +media($med)
+  //height: 7rem
   +media($large)
-    height: 10rem
+    //height: 10rem
 
 #main_header
   font:
     family: GothamNarrowXLight, $helvetica
     color: red
     //-8px
+  padding-top: 3.5rem
   +media($xxs)
     font-size: 2rem
   +media($xs) 
     font-size: 2.35rem
-    margin-top: 2rem
+    //margin-top: 2rem
   +media($small)
     font-size: 3.1rem
   +media($med)
@@ -28,7 +39,7 @@ header
   +media($large) 
     font-size: 3.5rem
     //70px
-    margin-top: 4.25rem
+    //margin-top: 4.25rem
     //85px
 
 header, #knowledge_bomb_section
@@ -41,37 +52,41 @@ header, #knowledge_bomb_section
 #main_subheader
   @extend %SansSerif_GothamRoundbook_Helvetica
   color: $main_subheader_color
-  background: white
+  padding-top: 2.6rem
+  padding-left: 2.45rem
   +media($xxs)
     font-size: 1rem
     color: tomato
   +media($xs)
     //padding-left: 1.7rem
     +span-columns(2)
-    margin-top: 0.9rem
-    font-size: 1.1rem
+    //margin-top: 0.9rem
+    //font-size: 1.1rem
     color: yellow
-    padding-left: 1.5rem
+    padding-left: 1.7rem
+  //padding-left: 1.5rem
   +media($small)
     +span-columns(4)
-    padding-left: 1.65rem
-    text-align: left
-    font-size: 1.35rem
+    //padding-left: 1.65rem
+    //font-size: 1.35rem
     //padding-left: 2.2rem
     color: green
-    margin-top: 1.5rem
+    padding-left: 1.8rem
+    //margin-top: 1.5rem
   +media($med)
-    font-size: 2rem
+    //font-size: 2rem
     //padding-left: 2.2rem
-    margin-top: 1.6rem
+    //margin-top: 1.6rem
+    padding-left: 2rem
     color: blue
-    padding-left: 2.3rem
+    //padding-left: 2.3rem
   +media($large)
     //padding-left: 2.5rem
-    margin-top: 2.15rem
-    font-size: 1.5rem
-    color: red
-    padding-left: 2.3rem
+    //margin-top: 2.15rem
+    //font-size: 1.5rem
+    color: black
+    //padding-left: 2.3rem
+    padding-left: 2.45rem
 
 #knowledge_bomb_section
   background: rgba($red, .80)
@@ -82,7 +97,6 @@ header, #knowledge_bomb_section
 
 .bomb_icon
   +span-columns(12)
-  padding-left: 1.1rem
   height: 87%
-  margin-top: 0.5rem
+  padding-left: 1.1rem
   padding-top: 0.2rem
