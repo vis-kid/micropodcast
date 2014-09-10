@@ -44,11 +44,13 @@ header, #knowledge_bomb_section
 #main_subheader
   @extend %SansSerif_GothamRoundbook_Helvetica
   color: $main_subheader_color
+  background: white
   +media($xxs)
     font-size: 1rem
     color: tomato
   +media($xs)
     //padding-left: 1.7rem
+    +span-columns(2)
     margin-top: 0.9rem
     font-size: 1.1rem
     color: yellow
