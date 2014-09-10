@@ -46,24 +46,30 @@ header, #knowledge_bomb_section
     font-size: 1rem
     color: tomato
   +media($xs)
-    padding-left: 1.7rem
+    //padding-left: 1.7rem
     margin-top: 0.9rem
     font-size: 1.1rem
     color: yellow
+    padding-left: 1.5rem
   +media($small)
+    +span-columns(4)
+    padding-left: 1.65rem
+    text-align: left
     font-size: 1.35rem
-    padding-left: 2.2rem
+    //padding-left: 2.2rem
     color: green
   +media($med)
     font-size: 2rem
-    padding-left: 2.2rem
+    //padding-left: 2.2rem
     margin-top: 1.6rem
     color: blue
+    padding-left: 2.3rem
   +media($large)
-    padding-left: 2.5rem
+    //padding-left: 2.5rem
     margin-top: 2.15rem
     font-size: 1.5rem
     color: red
+    padding-left: 2.3rem
 
 #knowledge_bomb_section
   background: rgba($red, .80)
