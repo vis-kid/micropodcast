@@ -1,7 +1,7 @@
 .paginate_space
   +span-columns(12)
-  height: 10rem
-  //200px
+  height: 10.5rem
+  //210px
 
 footer a
   text-decoration: none
@@ -9,25 +9,26 @@ footer a
   &:hover
     color: rgba(white, .6)
 
-#footer
-  height: 6.2rem
-  //124px
+#footer_bg
+  height: 6.5rem
+  //130px
   ul
-    background: rgba($red, .35)
-    padding-bottom: 2.5rem
-    //50px
+    //56px
     @extend %SansSerif_GothamRoundbook_Helvetica
     text-align: center
-    padding-left: 2.75rem
-    //55px
+    padding:
+      bottom: 2.3rem
+      left: 2.75rem
+      //55px
+      top: 3rem
+      //50px
     li
       display: inline-block
-      font-size: 1.1rem
+      font-size: 1.05rem
+      font-weight: normal
       //22px
       padding:
         right: 2.5rem
-        //50px
-        top: 2.5rem
         //50px
       color: white
   h6
@@ -38,7 +39,7 @@ footer a
       right: 2.5rem
       //50px
     margin:
-      top: -3.7rem
+      top: -3.5rem
       //-74px
     color: rgba(white, .3)
     a
@@ -51,8 +52,11 @@ footer a
         color: rgba(white, 1)
 
 #footer h6 a
+  font-weight: normal
   +media($xs)
     display: none
   +media($large)
     display: block
 
+#footer
+  background: rgba($red, 0.4)
