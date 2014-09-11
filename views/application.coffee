@@ -2,7 +2,7 @@
 	mq = window.matchMedia( "(max-width: 768px)" )
 	if mq.matches
 
-    t = new Trianglify({ cellsize: 110, noiseIntensity: 0.0, x_gradient: [ '#9E030A', '#E42F3A',  '#9E030A' ] })
+    t = new Trianglify({ cellsize: 170, noiseIntensity: 0.0, x_gradient: [ '#9E030A', '#E42F3A',  '#9E030A' ] })
     pattern = t.generate(document.body.clientWidth, document.body.clientHeight)
     global_bg = document.getElementById('global_bg')
     global_bg.setAttribute('style', 'background-image: '+pattern.dataUrl)
