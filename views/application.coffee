@@ -40,7 +40,6 @@
     mainHeader.hover(show_home, show_title) 
 )()
 
-###
 (->
 	mq = window.matchMedia( "(min-width: 1024px)" )
 	if mq.matches
@@ -68,6 +67,7 @@
       knowledgeBombSection.remove()
 )()
 
+###
 
 editor = new wysihtml5.Editor("wysihtml5-textarea", { 
   toolbar:      "wysihtml5-toolbar", 
