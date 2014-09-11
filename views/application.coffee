@@ -9,7 +9,8 @@
 
   else
     global_bg = document.getElementById('global_bg')
-    t = new Trianglify({ cellsize: 300, noiseIntensity: 0.0, x_gradient: ['#AC679E', '#C34875', '#D5385D'], y_gradient: ['#220528', '#FBC3B6', '#D23D52'] })
+		#t = new Trianglify({ cellsize: 300, noiseIntensity: 0.0, x_gradient: ['#AC679E', '#C34875', '#D5385D'], y_gradient: ['#220528', '#FBC3B6', '#D23D52'] })
+    t = new Trianglify({ cellsize: 110, noiseIntensity: 0.0, x_gradient: [ '#9E030A', '#E42F3A',  '#9E030A' ] })
     pattern = t.generate(document.body.clientWidth, document.body.clientHeight)
     global_bg.setAttribute('style', 'background-image: '+pattern.dataUrl)
 )()
