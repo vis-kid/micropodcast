@@ -2,7 +2,7 @@
 	mq = window.matchMedia( "(max-width: 768px)" )
 	if mq.matches
 
-    t = new Trianglify({ cellsize: 70, noiseIntensity: 0.0, x_gradient: [ '#9E030A', '#E42F3A',  '#9E030A' ] })
+    t = new Trianglify({ cellsize: 110, noiseIntensity: 0.0, x_gradient: [ '#9E030A', '#E42F3A',  '#9E030A' ] })
     pattern = t.generate(document.body.clientWidth, document.body.clientHeight)
     global_bg = document.getElementById('global_bg')
     global_bg.setAttribute('style', 'background-image: '+pattern.dataUrl)
@@ -36,6 +36,7 @@
     mainHeader.hover(show_home, show_title) 
 )()
 
+###
 (->
 	mq = window.matchMedia( "(min-width: 1024px)" )
 	if mq.matches
@@ -55,7 +56,7 @@
 	mq = window.matchMedia( "(min-width: 1024px)" )
 	if mq.matches
     knowledgeBombSection = $('#knowledge_bomb_section')
-    if window.location.href == "http://localhost:9393/?page=1/" 
+    if window.location.href == "http://localhost:9393/?page=1" 
       knowledgeBombSection.show()
     else if window.location.href == "http://localhost:9393/" 
       knowledgeBombSection.show()
@@ -63,7 +64,6 @@
       knowledgeBombSection.remove()
 )()
 
-###
 
 editor = new wysihtml5.Editor("wysihtml5-textarea", { 
   toolbar:      "wysihtml5-toolbar", 
