@@ -16,7 +16,7 @@
 )()
 
 (->
-  footer_bg = document.getElementById('footer')
+  footer_bg = document.getElementById('footer_bg')
 
   tri = new Trianglify({ cellsize: 110, noiseIntensity: 0.0, x_gradient: [ '#9E030A', '#E42F3A',  '#9E030A' ] })
   pattern = tri.generate(document.body.clientWidth, document.body.clientHeight)
