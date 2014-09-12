@@ -9,15 +9,9 @@
   height: 2px
 
 header
-  height: 10rem
+  height: 5.5rem
   //200px
   background: rgba($red, .3)
-  +media($xs)
-  height: 6.5rem
-  +media($small)
-  // height: 7rem
-  +media($med)
-    height: 7.5rem
   +media($large)
     //height: 10rem
     height: 6.5rem
@@ -29,14 +23,12 @@ header
   +media($xxs)
     font-size: 2rem
   +media($xs) 
-    padding-top: 1.5rem
-    font-size: 2.35rem
-    //margin-top: 2rem
+    font-size: 2.7rem 
+    padding-top: 2.1rem
   +media($small)
-    font-size: 3.1rem
-  +media($med)
     font-size: 3.21rem 
-    padding-top: 1.85rem
+    padding-top: 2.1rem
+  +media($med)
   +media($large) 
     font-size: 2.5rem
     padding-top: 1.6rem
@@ -56,43 +48,9 @@ header, #knowledge_bomb_section
   color: $dark_grey
   padding-top: 2.6rem
   padding-left: 2.45rem
-  +media($xxs)
-    font-size: 1rem
-    color: tomato
-  +media($xs)
-    //padding-left: 1.7rem
-    +span-columns(2)
-    //margin-top: 0.9rem
-    //font-size: 1.1rem
-    color: yellow
-    padding-top: 1.3rem
-    padding-left: 1.7rem
-  //padding-left: 1.5rem 
-  +media($small)
-    +span-columns(4)
-    //padding-left: 1.65rem
-    //font-size: 1.35rem
-    //padding-left: 2.2rem
-    color: green
-    padding-left: 2.1rem
-    //margin-top: 1.5rem
-  +media($med)
-    //font-size: 2rem
-    //padding-left: 2.2rem
-    //margin-top: 1.6rem
-    font-size: 1.5rem
-    padding-left: 2.4rem
-    padding-top: 1.5rem
-    color: blue
-    //padding-left: 2.3rem
+  display: none
   +media($large)
-    //padding-left: 2.5rem
-    //margin-top: 2.15rem
-    //font-size: 1.5rem
-    color: $dark_grey
-    //padding-left: 2.3rem
-    padding-left: 2.45rem
-  +media($large)
+    display: block
     font-size: 1.25rem
     padding-left: 1.8rem
     padding-top: 1.7rem
