@@ -9,18 +9,28 @@ footer a
   &:hover
     color: rgba(white, .6)
 
+#footer
+  background: rgba($red, 0.3)
+  height: 5.5rem
+  +media($large)
+    height: 6.5rem
+
 #footer_bg
-  height: 6.5rem
+  height: 5.5rem
+  +media($large)
+    height: 6.5rem
+
+#footer_bg
   //130px
   ul
     //56px
     @extend %SansSerif_GothamRoundbook_Helvetica
     text-align: center
     padding:
-      bottom: 2.3rem
+      bottom: 0.8rem
       left: 2.75rem
       //55px
-      top: 3rem
+      top: 2.4rem
       //50px
     li
       display: inline-block
@@ -31,6 +41,8 @@ footer a
         right: 2.5rem
         //50px
       color: white
+    +media($large)
+      padding-top: 3.2rem
   h6
     +transition(all 0.1s ease-in-out)
     @extend %SansSerif_GothamRoundbook_Helvetica
@@ -38,9 +50,6 @@ footer a
     margin:
       right: 2.5rem
       //50px
-    margin:
-      top: -3.47rem
-      //-74px
     color: rgba(white, .3)
     a
       color: rgba(white, .3)
@@ -53,10 +62,8 @@ footer a
 
 #footer h6 a
   font-weight: normal
+  margin-top: -1.95rem
   +media($xs)
     display: none
   +media($large)
     display: block
-
-#footer
-  background: rgba($red, 0.3)
