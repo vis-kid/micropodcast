@@ -5,9 +5,11 @@ footer a
     color: rgba(white, .6)
 
 #footer
-  background: rgba($red, 0.3)
   height: 5.5rem
+  +media($xs)
+    background: rgba($red, 0.5)
   +media($large)
+    background: rgba($red, 0.3)
     height: 6.5rem
 
 #footer_bg
