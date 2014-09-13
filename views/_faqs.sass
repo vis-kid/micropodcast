@@ -9,11 +9,14 @@
     +span-columns(3)
     +shift(0.5)
   +media($medlarge)
-    +span-columns(2.5)
-    +shift(0.75)
+    +span-columns(3)
+    +shift(0.5)
   +media($large)
-    +span-columns(7)
-    +shift(2.5)
+    +span-columns(8)
+    +shift(2)
+  +media($xlarge)
+    +span-columns(7.4)
+    +shift(2.3)
 
 #faq_background
   background: rgba(white, 1)
@@ -28,19 +31,18 @@
   margin-bottom: .1rem
   //2px 
   +media($xs)
-    font-size: 1.5rem
+    font-size: 1.6rem
   +media($small)
-    font-size: 1.5rem
+    font-size: 1.7rem
   +media($med)
     font-size: 1.8rem
   +media($medlarge)
-    font-size: 1.8rem
+    font-size: 2rem
   +media($large)
     font-size: 1.4rem
 
 #faq_background p
   @extend %Serif_Text_Type_Georgia
-  font-size: 1.2rem
   //24px
   line-height: 1.56rem
   //1.3em
@@ -48,11 +50,15 @@
   margin-bottom: 2.75rem
   //55px
   +media($xxs)
-    font-size: 1rem
+    font-size: 1.3rem
+  +media($xs)
+    margin-bottom: 2.3rem
+    font-size: 1.35rem
   +media($med)
-    font-size: 1.7rem
+    font-size: 1.5rem
   +media($medlarge)
     font-size: 1.7rem
+    margin-bottom: 3.2rem
   +media($large)
     font-size: 1.2rem
 
