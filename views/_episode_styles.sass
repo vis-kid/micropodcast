@@ -27,7 +27,8 @@ iframe, .episode_title, .episode_sub_title
 .episode_title
   +clearfix
   text-rendering: optimizeLegibility
-  font-size: 1.5rem 
+  font-size: 1.65rem 
+  line-height: 1.6rem
   padding-top: 2.25rem
   //45px
   a
@@ -36,12 +37,9 @@ iframe, .episode_title, .episode_sub_title
       color: lighten($dark_grey, 40%)
   +media($xs)
     font-family: $helvetica 
-    line-height: 1.5rem
     font-weight: 500
   +media($small)
     font-weight: 500
-    font-size: 1.65rem 
-    line-height: 1.8rem
   +media($large)
     font-family: GothamNarrowBook, $helvetica 
     font-size: 1.5rem 
