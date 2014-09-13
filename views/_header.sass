@@ -11,8 +11,10 @@
 header
   height: 5.5rem
   //200px
-  background: rgba($red, .3)
+  +media($xs)
+    background: rgba($red, .6)
   +media($large)
+    background: rgba($red, .3)
     //height: 10rem
     height: 6.5rem
 
