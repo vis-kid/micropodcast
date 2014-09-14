@@ -33,7 +33,7 @@ html
     font-size: 20px
 
 
-#show_notes_display a, .interviewee_name_link
+.interviewee_name_link
   color: $red
 
 // EXTENDS
@@ -46,7 +46,7 @@ html
 
 // COLUMNS
 
-.iframe_container, .iframe_transparent_container, footer, .white_layer, #shownote_container, .episode_form_container, .episode_form_container input, #button_container, #faq_background
+.iframe_container, .iframe_transparent_container, footer, .white_layer, .episode_form_container, .episode_form_container input, #button_container, #faq_background
   +span-columns(12)
 
 .input_label, .input_field, #wysihtml5-textarea 
@@ -57,10 +57,6 @@ html
 .input_label, .input_field, .episode_form_header, #wysihtml5-textarea
   +shift(1)
 
-#show_notes_display, #show_notes_headline
-  +shift(2)
-  +media($xs) 
-    +shift(0.3)
 // Reset
 
 *
@@ -75,7 +71,7 @@ nav li, nav a, #list_view li
 #button_container, #login_form
   background: rgba(white, 0.85)
 
-.iframe_container, .paginate_space, #shownote_container, .white_line
+.iframe_container, .paginate_space, .white_line
   background: $white_background
 
 .iframe_container, .iframe_transparent_container 
