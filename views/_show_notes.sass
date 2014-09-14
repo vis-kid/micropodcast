@@ -1,3 +1,19 @@
+#shownote_container
+  +span-columns(12)
+  background: $white_background
+
+#show_notes_display, #show_notes_headline, #shownote_container  #shownote_container 
+  +media($xs)
+    +span-columns(1.9)
+  +media($large)
+    +span-columns(8)
+    +shift(2)
+
+#show_notes_display, #show_notes_headline
+  +shift(2)
+  +media($xs)
+    +shift(0.3)
+
 #show_notes_display
   white-space: pre-wrap
   @extend %Serif_Text_Type_Georgia
@@ -11,6 +27,7 @@
   //45px
 
 #show_notes_display a
+  color: $red
   font-size: 1.2rem
   //24px
   text-decoration: none
@@ -18,12 +35,10 @@
     border-bottom: 1px solid $red
   
 #show_notes_headline
-  @extend %SansSerif_GothamRoundbook_Helvetica
+  font-family: GothamNarrowBook, $helvetica
   color: $red
-  font-size: 2rem
+  font-size: 1.45rem
   //40px
-  margin-top: 2.5rem
+  margin-top: 0.5rem
   //50px
-  margin-bottom: 2.5rem
-  
-
+  margin-bottom: 0.5rem
