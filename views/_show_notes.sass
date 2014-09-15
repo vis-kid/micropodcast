@@ -2,33 +2,71 @@
   +span-columns(12)
   background: $white_background
 
-.show_notes_display, .show_notes_headline, #shownote_container  #shownote_container 
+.show_notes_headline
+  +span-columns(5)
+
+.show_notes_display,.show_notes_headline, #shownote_container  #shownote_container 
   +media($xs)
-    +span-columns(1.9)
+    +shift(0.7)
+    //background: red
+  +media($med)
+    //background: tomato
+    +shift(0.11)
+  +media($medlarge)
+    //background: yellow
+    +shift(0.5)
+  +media($large)
+    //background: green
+    +shift(0.65)
+  +media($xlarge)
+    //background: blue
+    +shift(2.5)
+
+.show_notes_display, #shownote_container  #shownote_container 
+  +media($xs)
+  +media($med) 
+    +span-columns(2.77)
+  +media($medlarge)
+    +span-columns(2.77)
   +media($large)
     +span-columns(8)
-    +shift(2)
+  +media($xlarge)
+    +span-columns(7)
 
-.show_notes_display, .show_notes_headline
-  +shift(2)
+.show_notes_display
   +media($xs)
-    +shift(0.3)
+    +span-columns(1.8)
+  +media($med) 
+    +span-columns(3.52)
+  +media($medlarge)
+    +span-columns(3)
+  +media($large)
+    +span-columns(8)
+  +media($xlarge)
+    +span-columns(7)
+
+.show_notes_display, .show_notes_display a
+  //background: green
+  @extend %Serif_Text_Type_Georgia
+  font-size: 1.2rem
+  line-height: 2.025rem
+  +media($medlarge)
+    font-size: 1.6rem
+  +media($large)
+    font-size: 1.3rem
 
 .show_notes_display
   white-space: pre-wrap
-  @extend %Serif_Text_Type_Georgia
-  font-size: 1.35rem
   //27px
-  line-height: 2.025rem
   //1.5em
   font-weight: normal
   color: tint($dark_grey, 5%)
   margin-top: 1.2rem
+  margin-bottom: 8rem
   //45px
 
 .show_notes_display a
   color: $red
-  font-size: 1.2rem
   //24px
   text-decoration: none
   &:hover
@@ -37,8 +75,14 @@
 .show_notes_headline
   font-family: GothamNarrowBook, $helvetica
   color: $red
-  font-size: 1.45rem
+  //background: blue
+  font-weight: normal
+  font-size: 1.25rem
   //40px
   margin-top: 0.5rem
   //50px
   margin-bottom: 0.5rem
+  +media($medlarge)
+    font-size: 1.75rem
+  +media($large)
+    font-size: 1.45rem
