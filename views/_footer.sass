@@ -21,7 +21,7 @@ footer a
   //130px
   ul
     //56px
-    @extend %SansSerif_GothamRoundbook_Helvetica
+    font-family: $helvetica
     text-align: center
     padding:
       bottom: 0.8rem
@@ -42,7 +42,6 @@ footer a
       padding-top: 3.2rem
   h6
     +transition(all 0.1s ease-in-out)
-    @extend %SansSerif_GothamRoundbook_Helvetica
     float: right
     margin:
       right: 2.5rem
@@ -64,3 +63,7 @@ footer a
     display: none
   +media($large)
     display: block
+
+#footer_bg ul
+  +media($large)
+    font-family: GothamRoundBook
