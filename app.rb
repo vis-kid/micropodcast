@@ -85,10 +85,10 @@ get '/about' do
   slim :about
 end
 
-get '/topics' do
-  @title = ' :topics'
-  slim :topics
-end
+#get '/topics' do
+#  @title = ' :topics'
+#  slim :topics
+#end
 
 not_found do
 	slim :not_found
