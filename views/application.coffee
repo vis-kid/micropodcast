@@ -1,25 +1,15 @@
 (->
-  mq = window.matchMedia( "(max-width: 768px)" )
-  if mq.matches
-    global_bg = document.getElementById('global_bg')
-
-    t = new Trianglify({ cellsize: 100, noiseIntensity: 0.0, x_gradient: [ '#9E030A', '#E42F3A',  '#9E030A' ] })
-    pattern = t.generate(document.body.clientWidth, document.body.clientHeight)
-    global_bg.setAttribute('style', 'background-image: '+pattern.dataUrl)
-
-  else
-    global_bg = document.getElementById('global_bg')
-		#t = new Trianglify({ cellsize: 300, noiseIntensity: 0.0, x_gradient: ['#AC679E', '#C34875', '#D5385D'], y_gradient: ['#220528', '#FBC3B6', '#D23D52'] })
-    t = new Trianglify({ cellsize: 110, noiseIntensity: 0.0, x_gradient: [ '#9E030A', '#E42F3A',  '#9E030A' ] })
-    pattern = t.generate(document.body.clientWidth, document.body.clientHeight)
-    global_bg.setAttribute('style', 'background-image: '+pattern.dataUrl)
-)()
-
-(->
+  global_bg = document.getElementById('global_bg')
   footer_bg = document.getElementById('footer_bg')
 
-  tri = new Trianglify({ cellsize: 110, noiseIntensity: 0.0, x_gradient: [ '#9E030A', '#E42F3A',  '#9E030A' ] })
-  pattern = tri.generate(document.body.clientWidth, document.body.clientHeight)
+
+  triangle_bg = new Trianglify({ cellsize: 100, noiseIntensity: 0.0, x_gradient: [ '#9E030A', '#E42F3A',  '#9E030A' ] })
+  pattern = triangle_bg.generate(document.body.clientWidth, document.body.clientHeight)
+
+# Header bg
+  global_bg.setAttribute('style', 'background-image: '+pattern.dataUrl)
+	
+# Footer bg
   footer_bg.setAttribute('style', 'background-image: '+pattern.dataUrl)
 )()
 
@@ -27,8 +17,6 @@
 
 (->
   mainHeader = $('#main_header a')
-	#pathname = window.location.pathname	
-	#windowSearchString = window.location.search.substring()
 
   show_home = ->
     mainHeader.css('cursor':'pointer', 'color': '#292929', 'opacity': '.5').text('«« BACK TO HOMEPAGE').fadeTo(300, 1)
