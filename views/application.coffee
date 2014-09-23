@@ -32,9 +32,9 @@
 
 (->
   mq = window.matchMedia( "(min-width: 1024px)" )
-  if mq.matches
-    knowledgeBombSection = $('#knowledge_bomb_section')
+  knowledgeBombSection = $('#knowledge_bomb_section')
 
+  if mq.matches
     if window.location.search.substring().match(/page=1/)    
       knowledgeBombSection.show()
     else if window.location.href == "http://between-screens.herokuapp.com/" 
