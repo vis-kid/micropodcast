@@ -1,6 +1,6 @@
 (->
-	mq = window.matchMedia( "(max-width: 768px)" )
-	if mq.matches
+  mq = window.matchMedia( "(max-width: 768px)" )
+  if mq.matches
     global_bg = document.getElementById('global_bg')
 
     t = new Trianglify({ cellsize: 100, noiseIntensity: 0.0, x_gradient: [ '#9E030A', '#E42F3A',  '#9E030A' ] })
@@ -41,8 +41,8 @@
 )()
 
 (->
-	mq = window.matchMedia( "(min-width: 1024px)" )
-	if mq.matches
+  mq = window.matchMedia( "(min-width: 1024px)" )
+  if mq.matches
     knowledgeBombSection = $('#knowledge_bomb_section')
 
     if window.location.search.substring().match(/page=1/)    
