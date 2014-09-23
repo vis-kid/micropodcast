@@ -14,9 +14,10 @@
 )()
 
 
-
 (->
   mainHeader = $('#main_header a')
+  link01 = "http://between-screens.herokuapp.com/"
+  link02 = "http://between-screens.herokuapp.com/?page=1"
 
   show_home = ->
     mainHeader.css('cursor':'pointer', 'color': '#292929', 'opacity': '.5').text('«« BACK TO HOMEPAGE').fadeTo(300, 1)
@@ -24,9 +25,10 @@
   show_title = ->
     mainHeader.css('cursor':'pointer', 'color': 'white', 'opacity': '0.5').text('BETWEEN | SCREENS').fadeTo(200, 1) 
 
-  unless window.location.href == "http://between-screens.herokuapp.com/" or  window.location.href == "http://between-screens.herokuapp.com/?page=1"
+  unless window.location.href == link01  or  window.location.href == link02
     mainHeader.hover(show_home, show_title) 
 )()
+
 
 (->
   mq = window.matchMedia( "(min-width: 1024px)" )
