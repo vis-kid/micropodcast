@@ -7,39 +7,35 @@
 
 .pagination, .pagination_space
   +span-columns(12)
-  height: 10.5rem
   background: white
+  height: 10.5rem
   //210px
 
 .pagination
   text-align: center
   padding-top: 3.25rem
-  //80px
   a
     display: inline-block
     color: $red
     text-decoration: none 
-    padding-left: 0.75rem
-    //15px
-    padding-right: 0.75rem
-    //15px
+    padding:
+      left: 0.75rem
+      right: 0.75rem
     &:hover
       border-bottom: 1px solid $red
   .current
     padding: 0rem 0.75rem 0rem 0.75rem
-    //0px 15px 0px 15px
 
 .previous_page
-  margin-right: 3rem
-  margin-left: 0.6rem
+  margin:
+    right: 3rem
+    left: 0.6rem
   padding-right: 0.5rem
-  //60px
   +media($xs)
-  margin-right: 0rem
+    margin-right: 0rem
 
 .next_page
   margin-left: 3rem
-  //60px
   padding-left: 0.75rem
   +media($xs)
-  margin-left: 0rem
+    margin-left: 0rem
