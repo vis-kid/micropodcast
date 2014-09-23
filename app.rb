@@ -91,13 +91,13 @@ end
 #end
 
 not_found do
-	slim :not_found
+  slim :not_found
 end
 
 helpers do
   def admin?
-		session[:admin]
-	end
+    session[:admin]
+  end
 end
 
 private
