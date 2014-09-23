@@ -8,10 +8,9 @@
   background: rgba(white, .986)
 
 iframe
-  margin-top: 0.65rem
-  //13px
-  margin-bottom: 2.4rem
-  //48px
+  margin:
+    top: 0.65rem
+    bottom: 2.4rem
 
 iframe, .episode_title, .episode_sub_title
   +media($xs)
@@ -24,46 +23,47 @@ iframe, .episode_title, .episode_sub_title
     +span-columns(9)
     +shift(1.5)
 
+.episode_title a
+  +transition(all 0.1s ease-in-out-back)
+  &:hover
+    color: lighten($dark_grey, 40%)
+
 .episode_title
   +clearfix
   text-rendering: optimizeLegibility
   font-size: 1.65rem 
   line-height: 1.75rem
   padding-top: 2.25rem
-  //45px
-  a
-    +transition(all 0.1s ease-in-out-back)
-    &:hover
-      color: lighten($dark_grey, 40%)
   +media($xs)
-    font-family: $helvetica 
-    font-weight: 500
+    font:
+      family: $helvetica 
+      weight: 500
   +media($small)
     font-weight: 500
   +media($medlarge)
     font-size: 1.8rem
   +media($large)
-    font-family: GothamNarrowBook, $helvetica 
-    font-size: 1.5rem 
-    //30px
     line-height: 1.885rem
-  //1.3em
+    font:
+      family: GothamNarrowBook, $helvetica 
+      size: 1.5rem 
 
 .episode_sub_title, .episode_sub_title span
   color: lighten($dark_grey, 40%)
-  font-family: $helvetica
   line-height: 1.2rem
-  font-size: 1rem
-  font-weight: normal
+  font:
+    family: $helvetica
+    size: 1rem
+    weight: normal
   +media($xs)
     margin-top: 0.45rem
   +media($small)
     font-size: 1.1rem
   +media($large)
     margin-top: 0.35rem
-    font-family: GothamRoundBook, $helvetica
-    font-size: 0.9rem
-    //18px
+    font:
+      family: GothamRoundBook, $helvetica
+      size: 0.9rem
 
 .episode_sub_title span
   color: $red
