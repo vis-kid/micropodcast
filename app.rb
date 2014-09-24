@@ -91,8 +91,8 @@ end
 #end
 
 get '/login' do
+	protected!
   @title = ': No No!'
-  slim :unauthorized
 end
 
 not_found do
