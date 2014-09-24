@@ -90,6 +90,11 @@ end
 #  slim :topics
 #end
 
+get '/login' do
+  @title = ': No No!'
+  slim :unauthorized
+end
+
 not_found do
   slim :not_found
 end
