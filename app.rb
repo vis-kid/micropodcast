@@ -34,7 +34,7 @@ get('/application.css'){ sass :application }
 
 
 get '/' do
-  @title = ' :home'
+  @title = ': home'
   @episodes = Episode.all(order: [:released_on.desc]).paginate(:page => params[:page], :per_page => 7)
   slim :home, layout: :knowledge_bomb_layout
 end
@@ -42,20 +42,20 @@ end
 
 get '/episodes/new' do
   protected!
-  @title = ' :new episode'
+  @title = ': new episode'
   @episode = Episode.new
   slim :new_episode 
 end
 
 get '/episodes/:id' do
-  @title = ' :shownotes'
+  @title = ': shownotes'
   @episode = find_episode
   slim :show_episode
 end
 
 get '/episodes/:id/edit' do
   protected!
-  @title = ' :edit'
+  @title = ': edit'
   @episode = find_episode
   slim :edit_episode 
 end
@@ -81,7 +81,7 @@ post '/episodes' do
 end
 
 get '/about' do
-  @title = ' :about'
+  @title = ': about'
   slim :about
 end
 
