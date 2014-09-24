@@ -1,15 +1,28 @@
 #not_found_container
   +outer-container
-  +span-columns(12)
   background: rgba(white, 1)
+
+#not_found_container h6
   color: $dark_grey
-  font-family: GothamNarrowXLight
   text-align: center
-  padding-top: 10rem
-  height: 450px
-  font-size: 3rem
+  padding-top: 3rem
+  margin-bottom: 3rem
+  font:
+    family: GothamNarrowXLight
+    size: 3rem
+    weight: normal
   +media(min-width 520px)
+    padding-top: 7rem
+    margin-bottom: 7rem
     font-size: 6rem
-    height: 900px
   +media(min-width 690px)
     font-size: 8rem
+
+#spies_like_us
+  background: white
+  +media(max-width 970px)
+    +span-columns(10)
+    +shift(1)
+  +media(min-width 971px)
+    +span-columns(9)
+    +shift(1.5)
