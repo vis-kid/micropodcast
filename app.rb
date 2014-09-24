@@ -92,7 +92,7 @@ end
 
 get '/login' do
 	protected!
-  @title = ': No No!'
+  @title = ': no no!'
 end
 
 not_found do
