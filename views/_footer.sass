@@ -5,17 +5,20 @@ footer a
     color: rgba(white, .6)
 
 #footer
-  height: 5.5rem
+  //height: 5.5rem
   +media($xs)
     background: rgba($red, 0.5)
   +media($large)
     background: rgba($red, 0.3)
-    height: 6.5rem
-
+    //height: 6.5rem
+    height: 220px
+    
 #footer_bg
-  height: 5.5rem
+  //height: 5.5rem
   +media($large)
-    height: 6.5rem
+    //height: 6.5rem
+    //height: 243px
+    height: 220px
 
 #footer_bg
   ul
@@ -61,3 +64,65 @@ footer a
 #footer_bg ul
   +media($large)
     font-family: GothamRoundBook
+
+#mc_embed_signup
+  +shift(4.6)
+  margin-top: 30px
+  h2
+    padding-bottom: 10px
+    color: $dark_grey
+  .button
+    margin-left: -100px
+    +button(pill, $dark_grey)
+
+.mc-field-group
+  +span-columns(6)
+  padding-bottom: -20px
+
+.mc-field-group input
+  border-radius: 20px
+  border: none
+
+.required
+  +span-columns(9)
+  height: 35px
+
+#mce-EMAIL
+  padding-left: 15px
+
+::-webkit-input-placeholder 
+  color: rgba($red, 0.55)
+  padding-left: 15px
+
+::-moz-placeholder
+  color: rgba($red, 0.55)
+  padding-left: 15px
+
+::-moz-placeholder
+  color: rgba($red, 0.55)
+  padding-left: 15px
+
+::-ms-input-placeholder   
+  color: rgba($red, 0.55)
+  padding-left: 15px
+
+
+
+//#mc_embed_signup
+//  +outer-container
+//  +span-columns(12)
+//  color: $dark_grey
+//  font-family: GothamRoundBook
+//
+//
+//#mc_embed_signup_scroll
+//
+//input#mc-embedded-subscribe.button
+//  +shift(5)
+//  background: $dark_grey
+//  &:hover
+//    background: black
+//
+//.email
+//  +shift(2)
+//  +span-columns(2)
