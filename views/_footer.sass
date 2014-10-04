@@ -6,19 +6,18 @@ footer a
 
 #footer
   //height: 5.5rem
+  height: 210px
   +media($xs)
     background: rgba($red, 0.5)
   +media($large)
     background: rgba($red, 0.3)
-    //height: 6.5rem
-    height: 210px
     
 #footer_bg
   //height: 5.5rem
+  height: 210px
   +media($large)
     //height: 6.5rem
     //height: 243px
-    height: 210px
 
 #footer_bg
   ul
@@ -26,12 +25,11 @@ footer a
     text-align: center
     padding:
       bottom: 0.8rem
-      left: 2.6rem
+      left: 2.2rem
       top: 2.3rem
     li
       display: inline-block
       font:
-        size: 1.05rem
         weight: normal
       padding:
         right: 2.5rem
@@ -62,31 +60,62 @@ footer a
     display: block
 
 #footer_bg ul
+  font-size: 1.3rem
   +media($large)
     font-family: GothamRoundBook
+    font-size: 1rem
+
+#mc_embed_signup_scroll
+  +shift(0.4)
+  +media(min-width 420px)
+    +shift(0.85)
+  +media(min-width 475px)
+    +shift(1.3)
+  +media(min-width 500px)
+    +shift(1.5)
+  +media(min-width 550px)
+    +shift(2.1)
+  +media($med)
+    +shift(1.35)
+  +media(min-width 650px)
+    +shift(0.58)
+  +media(min-width 700px)
+    +shift(2)
+  +media(min-width 760px)
+    +shift(2.5)
+  +media(min-width 820px)
+    +shift(2.9)
+  +media(min-width 900px)
+    +shift(2.8)
+  +media($large)
+    +shift(3.3)
+  +media($xlarge)
+    +shift(3.8)
 
 #mc_embed_signup
-  +shift(3.5)
   margin-top: 20px
   h2
     padding-bottom: 10px
     padding-left: 30px
     color: $dark_grey
   .button
-    margin-left: -286px
     +button(pill, $dark_grey)
+    +media(min-width 430px)
+    margin-left: -50px
 
 .mc-field-group
-  +span-columns(8.67)
   padding-bottom: -20px
 
 .mc-field-group input
   border-radius: 20px
   border: none
+  width: 300px
+  +media($med)
+    width: 400px
 
 .required
   +span-columns(9)
-  height: 35px
+  height: 34px
 
 #mce-EMAIL
   padding-left: 15px
@@ -109,24 +138,3 @@ textarea:focus, input:focus
 ::-ms-input-placeholder   
   color: rgba($red, 0.55)
   padding-left: 15px
-
-
-
-//#mc_embed_signup
-//  +outer-container
-//  +span-columns(12)
-//  color: $dark_grey
-//  font-family: GothamRoundBook
-//
-//
-//#mc_embed_signup_scroll
-//
-//input#mc-embedded-subscribe.button
-//  +shift(5)
-//  background: $dark_grey
-//  &:hover
-//    background: black
-//
-//.email
-//  +shift(2)
-//  +span-columns(2)
