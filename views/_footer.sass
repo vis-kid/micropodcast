@@ -71,7 +71,7 @@ footer a
     font-size: 1rem
 
 .subscription_wrapper
-  +display(flex)
+  display: flex
   height: 115px
   width: 100%
 
@@ -80,15 +80,15 @@ footer a
 
 .box01
   //order: 1
-  +flex-grow(1)
+  flex-grow: 1
 
 .box02
   //order: 1
-  +flex-grow(1)
+  flex-grow: 1
 
 .box03
   //order: 1
-  +flex-grow(1)
+  flex-grow: 1
 
 #mc-embedded-subscribe
   +button(pill, $dark_grey)
@@ -112,7 +112,6 @@ textarea:focus, input:focus
 
 input:hover
   border: 2px solid rgba($red, 0.7)
-
 
 ::-webkit-input-placeholder 
   color: rgba($red, 0.55)
