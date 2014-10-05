@@ -66,31 +66,27 @@ footer a
     font-size: 1rem
 
 #mc_embed_signup_scroll
-  +shift(1.8)
+  margin-left: 11.5%
   +media(min-width 420px)
-    +shift(0.85)
   +media(min-width 475px)
-    +shift(1.3)
   +media(min-width 500px)
-    +shift(1.5)
   +media(min-width 550px)
-    +shift(2.1)
   +media($med)
-    +shift(1.35)
   +media(min-width 650px)
-    +shift(0.58)
   +media(min-width 700px)
-    +shift(2)
   +media(min-width 760px)
-    +shift(2.5)
   +media(min-width 820px)
-    +shift(2.9)
   +media(min-width 900px)
-    +shift(2.8)
   +media($large)
-    +shift(3.3)
+    margin-left: 31.5%
+  +media(min-width 1100px)
+    margin-left: 33%
   +media($xlarge)
-    +shift(3.8)
+    margin-left: 34%
+  +media(min-width 1300px)
+    margin-left: 35.5%
+  +media(min-width 1400px)
+    margin-left: 36%
 
 #mc_embed_signup
   margin-top: 10px
@@ -98,25 +94,26 @@ footer a
     font-family: $helvetica
     font-weight: normal
     padding-bottom: 10px
-    padding-left: 30px
+    padding-left: 17%
     color: $dark_grey
   .button
-    //margin-left: -100px
-    margin-left: 80px 
-    margin-top: 10px
+    margin-left: -25px
+    //margin-left: 80px 
+    //margin-top: 10px
     +button(pill, $dark_grey)
     +media(min-width 430px)
       //margin-left: -50px
 
 .mc-field-group
-  padding-bottom: -20px
+  margin: auto
 
 .mc-field-group input
   border-radius: 20px
   border: none
-  width: 270px
+  width: 210px
   +media($med)
-    width: 400px
+    width: 270px
+    //width: 400px
 
 .required
   +span-columns(9)
