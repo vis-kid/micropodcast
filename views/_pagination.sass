@@ -2,8 +2,8 @@
   @extend %SansSerif_GothamRoundbook_Helvetica
   text-rendering: optimizeLegibility
 
-.previous_page, .current, .next_page 
-  font-size: 1.2rem
+.pagination a, previous_page, .current, .next_page 
+  font-size: 1rem
   color: $dark_grey
 
 .pagination, .pagination_space
@@ -13,10 +13,12 @@
   //210px
 
 .pagination
+  padding-left: 12px
+
+.pagination
   text-align: center
   padding-top: 3.25rem
   a
-    font-size: 1.2rem
     display: inline-block
     color: $red
     text-decoration: none 
