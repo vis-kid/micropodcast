@@ -42,7 +42,6 @@ iframe, .episode_title, .episode_sub_title
     size: 1.9rem 
   +media($med)
     line-height: 1.9rem
-    font-size: 1.9rem
   +media($large)
     font:
       family: GothamNarrowBook, $helvetica 
@@ -50,6 +49,7 @@ iframe, .episode_title, .episode_sub_title
       weight: 100
 
 .episode_sub_title, .episode_sub_title span
+  text-rendering: optimizeLegibility
   line-height: 1.2rem
   margin:
     top: 0.55rem
@@ -57,7 +57,6 @@ iframe, .episode_title, .episode_sub_title
   font:
     family: $helvetica
     size: 1rem
-    weight: 200
   +media(min-width 550px)
     font-size: 0.6rem
   +media($med)
@@ -65,12 +64,14 @@ iframe, .episode_title, .episode_sub_title
       top: 0.5rem
       bottom: 0.5rem
   +media($large)
-    margin-top: 0.25rem
-    margin-bottom: 0rem
+    margin:
+      top: 0.25rem
+      bottom: 0rem
     font-size: 0.9rem
 
 .episode_sub_title
   color: lighten($dark_grey, 40%)
+  font-weight: 200
   +media($large)
     font-family: GothamRoundBook, $helvetica
 
