@@ -67,9 +67,15 @@ header, #knowledge_bomb_section
     top: 0.2rem
 
 img.cube_logo 
-  width: 67px
-  height: 81px
+  width: 57px
+  height: 71px
   margin-left: 45px
   margin-top: 10px
-  &:hover 
-    opacity: 0.8
+  opacity: 0
+  +media($med)
+    opacity: 1
+    &:hover
+      opacity: 0.83
+  +media($large)
+    width: 67px
+    height: 81px

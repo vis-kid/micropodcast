@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg width="120px" height="120px" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
     <!-- Generator: Sketch 3.0.4 (8054) - http://www.bohemiancoding.com/sketch -->
-    <title>120 - iPhone App Icon 20</title>
+    <title>120 - iPhone App Icon 23</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <g id="120---iPhone-App-Icon-20" sketch:type="MSArtboardGroup">
+        <g id="120---iPhone-App-Icon-23" sketch:type="MSArtboardGroup">
             <g id="Polygon-1-+-|" sketch:type="MSLayerGroup" transform="translate(60.794118, 52.553050) rotate(-180.000000) translate(-60.794118, -52.553050) translate(6.294118, -9.446950)">
                 <g id="cube-+-Pipe" transform="translate(0.000000, -0.000000)" sketch:type="MSShapeGroup">
-                    <polygon id="cube" stroke="#FF0000" stroke-width="2" fill="#FFFFFF" points="54.7058824 0 102.082566 27.125 102.082566 81.375 54.7058824 108.5 7.3291985 81.375 7.3291985 27.125 "></polygon>
+                    <polygon id="cube" fill="#FFFFFF" points="54.7058824 0 102.082566 27.125 102.082566 81.375 54.7058824 108.5 7.3291985 81.375 7.3291985 27.125 "></polygon>
                     <path d="M52.6524034,107.699763 C52.6524034,108.408983 53.5008882,109 54.51907,109 C55.5372518,109 56.3857367,108.408983 56.3857367,107.699763 L56.3857367,70.5950037 L56.3857367,55.0992802 C56.3857367,54.3900602 55.5372518,53.7990435 54.51907,53.7990435 C53.5008882,53.7990435 52.6524034,54.3900602 52.6524034,55.0992802 L52.6524034,107.699763 Z" id="Pipe" fill="#FF0000"></path>
                 </g>
             </g>
