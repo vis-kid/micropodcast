@@ -7,21 +7,22 @@
 <![CDATA[
 	.st0{display:none;fill:#FFFFFF;}
 	.st1{fill-rule:evenodd;clip-rule:evenodd;}
-	.st2{display:inline;}
-	.st3{display:none;fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
-	.st4{display:none;}
-	.st5{display:none;fill-rule:evenodd;clip-rule:evenodd;}
+	.st2{opacity:0.5;}
+	.st3{display:inline;}
+	.st4{display:none;fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
+	.st5{display:none;}
+	.st6{display:none;fill-rule:evenodd;clip-rule:evenodd;}
 ]]>
 </style>
-<g id="Layer_8" class="st4">
+<g id="Layer_8" class="st5">
 </g>
 <g id="Layer_9">
 </g>
 <g id="Layer_7">
 </g>
-<g id="Layer_1" class="st4">
+<g id="Layer_1" class="st5">
 </g>
-<g id="Layer_2" class="st4">
+<g id="Layer_2" class="st5">
 </g>
 <g id="Layer_3">
 	<g id="Layer_4">
@@ -30,7 +31,7 @@
 <g id="Layer_5">
 </g>
 <g id="Layer_6">
-	<g>
+	<g class="st2">
 		<path class="st1" d="M9.004,13.599c-0.018-0.018,0.142-1.848,1.887-1.848c1.727,0,3.632,0,9.186,0c1.098,0,1.264,0.623,1.29,1.676
 			c0.028,1.143,0.006,2.286,0.006,3.554c7.471,0,21.014-0.067,22.742-0.067c0,0-0.016-1.579,0-1.848
 			c0.025-0.432,0-1.512,1.854-1.512c1.841,0,1.841,1.424,1.841,1.512c0,1.848,0,1.848,0,1.848c0.242,0,15.261,0.062,22.118,0.062
