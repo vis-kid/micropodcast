@@ -18,20 +18,17 @@ header
     height: 6.5rem
 
 #main_header
-  margin-top: -82px
+  margin-top: -44px
   font:
     family: GothamNarrowXLight, $helvetica
     size: 1.5rem
-  padding-top: 3.5rem
   +media($xs) 
     font-size: 2.1rem 
-    padding-top: 2rem
   +media($small)
     font-size: 3rem 
   +media($large) 
     font-size: 2.5rem
-    padding-top: 1.6rem
-    margin-top: -86px
+    margin-top: -42px
 
 header, #knowledge_bomb_section
   border-radius: 2px
@@ -69,9 +66,14 @@ img.bomb_icon
 
 img.cube_logo 
   margin-left: 45px
-  margin-top: 15px
+  margin-top: 10px
   opacity: 0
   +media($sevenhundred)
     opacity: 1
+    height: 55%
+    margin-top: 20px
     &:hover
       opacity: 0.83
+  +media($large)
+    height: 45%
+    margin-top: 12px
