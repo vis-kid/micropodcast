@@ -2,9 +2,12 @@
   @extend %SansSerif_GothamRoundbook_Helvetica
   text-rendering: optimizeLegibility
 
-.pagination a, previous_page, .current, .next_page 
+.pagination a, .current, 
   font-size: 1rem
   color: $dark_grey
+
+a.previous_page, a.next_page 
+  font-size: 1.1rem
 
 .pagination, .pagination_space
   +span-columns(12)
