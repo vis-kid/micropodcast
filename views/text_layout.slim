@@ -1,0 +1,22 @@
+
+doctype 5
+html lang='en'
+  head
+    meta name="viewport" content="width=device-width, initial-scale=1.0"
+
+    == slim :head
+
+  body
+    #global_bg
+      header
+
+        .white_line
+        //== slim :navigation
+        == slim :main_headers
+
+      section
+        == yield
+    == slim :small_pagination_space
+    == slim :footer
+== slim :post_dom_loading_scripts
+

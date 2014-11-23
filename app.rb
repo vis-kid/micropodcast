@@ -50,7 +50,7 @@ end
 get '/episodes/:id' do
   @title = ': shownotes'
   @episode = find_episode
-  slim :show_episode
+  slim :show_episode, layout: :text_layout 
 end
 
 get '/episodes/:id/edit' do
@@ -82,7 +82,7 @@ end
 
 get '/about' do
   @title = ': about'
-  slim :about
+  slim :about, layout: :text_layout
 end
 
 #get '/topics' do
@@ -93,10 +93,11 @@ end
 get '/login' do
 	protected!
   @title = ': no no!'
+	slim :unauthorized, layout: :text_layout
 end
 
 not_found do
-  slim :not_found
+  slim :not_found, layout: :text_layout
 end
 
 helpers do
