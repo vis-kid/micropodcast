@@ -30,7 +30,8 @@ iframe, .episode_title, .episode_sub_title
   &:hover
     color: lighten($dark_grey, 40%)
 
-.episode_title
+#podcast_container .episode_title,
+#shownote_container .episode_title
   +clearfix
   text-rendering: optimizeLegibility
   padding-top: 2.25rem
@@ -49,6 +50,10 @@ iframe, .episode_title, .episode_sub_title
       family: GothamNarrowBook, $helvetica 
       size: 1.8rem 
       weight: 100
+
+#podcast_container .episode_title,
+  +media($large)
+    font-size: 1.6rem
 
 .episode_sub_title, .episode_sub_title span
   text-rendering: optimizeLegibility
