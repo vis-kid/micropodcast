@@ -2,7 +2,7 @@
   +span-columns(12)
   background: $white_background
 
-.show_notes_display,.show_notes_headline, #shownote_container  #shownote_container 
+.show_notes_display, .show_notes_headline, #shownote_container .episode_title, #shownote_container .episode_sub_title, #shownote_iframe_container 
   +media($xs)
     +shift(0.7)
   +media($med)
@@ -14,7 +14,7 @@
   +media($xlarge)
     +shift(2.5)
 
-.show_notes_display, #shownote_container  #shownote_container 
+#shownote_container .episode_title, #shownote_container .episode_sub_title
   +media($med) 
     +span-columns(2.77)
   +media($large)
@@ -83,4 +83,20 @@
       weight: normal
 
 .show_notes_display b 
-  font-size: 1.8rem
+  font-size: 1.5rem
+
+#shownote_iframe_container iframe
+  margin-left: 0px
+
+#shownote_iframe_container 
+  margin-right: 0px
+  +media($xs)
+    width: 101%
+  +media($med) 
+    width: 99%
+  +media($medlarge)
+    width: 83.7%
+  +media($large)
+    width: 79.3%
+  +media($xlarge)
+    width: 77%
