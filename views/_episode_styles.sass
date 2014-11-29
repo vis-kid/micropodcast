@@ -35,17 +35,16 @@ iframe, .episode_title, .episode_sub_title
   +clearfix
   text-rendering: optimizeLegibility
   padding-top: 2.25rem
-  line-height: 2rem
+  line-height: 1.8rem
   letter-spacing: 0.01rem
   font:
     family: $helvetica 
-    weight: 300
-    size: 1.8rem 
+    weight: 400
+    size: 2rem 
   +media($small)
     font-size: 2.1rem
-    line-height: 2.4rem
-  +media($large)
     line-height: 2rem
+  +media($large)
     font:
       family: GothamNarrowBook, $helvetica 
       size: 1.8rem 
@@ -56,8 +55,12 @@ iframe, .episode_title, .episode_sub_title
     font-size: 1.6rem
 
 #shownote_container .episode_title,
+  line-height: 2rem
+  font-weight: 400
+  color: $dark_grey
+  +media($small)
   +media($large)
-    line-height: 2.6rem
+    line-height: 2.1rem
 
 .episode_sub_title, .episode_sub_title span
   text-rendering: optimizeLegibility
@@ -93,5 +96,11 @@ iframe, .episode_title, .episode_sub_title
       style: normal
 
 #shownote_container .episode_sub_title
-  margin-bottom: 0.6rem
-  margin-top: 0.6rem
+  margin-bottom: 0.1rem
+  margin-top: 0.1rem
+  +media($med)
+    margin-bottom: 0rem
+    margin-top: 0.3rem
+  +media($large)
+    margin-bottom: 0rem
+    margin-top: 0.3rem
