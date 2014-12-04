@@ -35,7 +35,7 @@ get('/application.css'){ sass :application }
 
 get '/' do
   @title = ': home'
-  @episodes = Episode.all(order: [:id.desc]).paginate(:page => params[:page], :per_page => 2)
+  @episodes = Episode.all(order: [:id.desc]).paginate(:page => params[:page], :per_page => 7)
   slim :home, layout: :knowledge_bomb_layout
 end
 
