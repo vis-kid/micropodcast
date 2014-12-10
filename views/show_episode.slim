@@ -7,7 +7,7 @@
 
 #shownote_container 
   h2.episode_title #{ @episode.title }
-  h3.episode_sub_title <span> #{ @episode.interviewee_name } </span> | #{ @episode.length }  Mintues | #{ @episode.released_on } | Episode ##{ @episode.id }  
+  h3.episode_sub_title <span> #{ @episode.interviewee_name } </span> | #{ @episode.length }  Mintues | #{ @episode.released_on.strftime(" %b %e, %Y") } | Episode ##{ @episode.id }  
   #shownote_iframe_container 
     iframe [ width="100%" 
              height="380" 
