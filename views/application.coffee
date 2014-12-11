@@ -16,8 +16,8 @@
 
 (->
   mainHeader = $('#main_header a')
-  link01 = "http://between-screens.herokuapp.com/"
-  link02 = "http://between-screens.herokuapp.com/?page=1"
+  link01 = "http://www.betweenscreens.fm/"
+  link02 = "http://www.betweenscreens.fm//?page=1"
 
   show_home = ->
     mainHeader.css('cursor':'pointer', 'color': '#292929', 'opacity': '.5').text('«« BACK TO HOMEPAGE').fadeTo(300, 1)
@@ -37,7 +37,7 @@
   if mq.matches
     if window.location.search.substring().match(/page=1/)    
       knowledgeBombSection.show()
-    else if window.location.href == "http://between-screens.herokuapp.com/" 
+    else if window.location.href == "http://www.betweenscreens.fm/" 
       knowledgeBombSection.show()
     else
       knowledgeBombSection.remove()
