@@ -37,7 +37,7 @@
   if mq.matches
     if window.location.search.substring().match(/page=1/)    
       knowledgeBombSection.show()
-    else if window.location.href == "http://www.betweenscreens.fm/" 
+    else if window.location.href == "http://www.betweenscreens.fm/" or window.location.href == "http://betweenscreens.fm/" 
       knowledgeBombSection.show()
     else
       knowledgeBombSection.remove()
