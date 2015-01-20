@@ -48,8 +48,16 @@ html
 
 // COLUMNS
 
-.iframe_container, .iframe_transparent_container, footer, .white_layer, .episode_form_container, .episode_form_container input, #button_container, #faq_background
+footer, .white_layer, .episode_form_container, .episode_form_container input, #button_container, #faq_background
   +span-columns(12)
+
+
+.iframe_container, .iframe_transparent_container
+  +span-columns(12)
+  +media($xlarge)
+    +span-columns(10)
+    +shift(1)
+    +clearfix
 
 .input_label, .input_field, #wysihtml5-textarea 
   +span-columns(10)
@@ -88,7 +96,7 @@ nav a
 .episode_form_header
   color: $dark_grey
 
-body, #global_bg, #knowledge_bomb_section
+//body, #global_bg, #knowledge_bomb_section
   +outer-container
 
 // SELECTORS

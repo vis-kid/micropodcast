@@ -1,6 +1,6 @@
 (->
   global_bg = document.getElementById('global_bg')
-  footer_bg = document.getElementById('footer_bg')
+  footer_bg = document.getElementById('footer')
 
 
   triangle_bg = new Trianglify({ cellsize: 100, noiseIntensity: 0.0, x_gradient: [ '#9E030A', '#E42F3A',  '#9E030A' ] })
@@ -29,7 +29,6 @@
     mainHeader.hover(show_home, show_title) 
 )()
 
-
 (->
   mq = window.matchMedia( "(min-width: 1024px)" )
   knowledgeBombSection = $('#knowledge_bomb_section')
@@ -44,20 +43,19 @@
 )()
 
 ###
-
 (->
 	mq = window.matchMedia( "(min-width: 1024px)" )
 	if mq.matches
     knowledgeBombSection = $('#knowledge_bomb_section')
-    if window.location.href == "http://localhost:9393/?page=1" 
+    if window.location.href == "http://localhost:8000/?page=1" 
       knowledgeBombSection.show()
-    else if window.location.href == "http://localhost:9393/" 
+    else if window.location.href == "http://localhost:8000/" 
       knowledgeBombSection.show()
     else
       knowledgeBombSection.remove()
 )()
-
 ###
+
 
 
 (->
