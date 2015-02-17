@@ -89,9 +89,9 @@ end
 #end
 
 get '/login' do
-	protected!
+  protected!
   @title = ': no no!'
-	slim :unauthorized, layout: :text_layout
+  slim :unauthorized, layout: :text_layout
 end
 
 not_found do
