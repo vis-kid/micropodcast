@@ -1,7 +1,6 @@
 require 'dm-core'
 require 'dm-migrations'
 
-
 class Episode
   include DataMapper::Resource
 
