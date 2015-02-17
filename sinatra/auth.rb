@@ -18,19 +18,19 @@ module Sinatra
 
       app.enable :sessions
 
-      app.set username: 'Bombcaster',
-              password: 'Micropodcast'
+      app.set username: 'Secret sauce',
+              password: 'Wouldn\'t you wanna know?'
      
-      app.get '/lllogin' do
+      app.get '/login' do
         slim :login
       end
 
-      app.post '/lllogin' do
+      app.post '/login' do
         if params[:username] == settings.username && params[:password] == settings.password
           session[:admin] = true
           redirect to('/')
         else
-          redirect to('/lllogin')
+          redirect to('/login')
         end
       end
 
