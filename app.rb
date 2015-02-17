@@ -18,7 +18,7 @@ require 'will_paginate/data_mapper'
 configure do
 	enable :sessions
   set :server, :puma 
-  set :session_secret, '50me 5ecret Matr1ck5 next level 5h1t'
+  set :session_secret, 'secret stuff in here'
 end
 
 configure :development do
@@ -32,13 +32,11 @@ end
 get('/javascripts/application.js'){ coffee :application }
 get('/application.css'){ sass :application }
 
-
 get '/' do
   @title = ': home'
   @episodes = Episode.all(order: [:id.desc]).paginate(:page => params[:page], :per_page => 7)
   slim :home, layout: :knowledge_bomb_layout
 end
-
 
 get '/episodes/new' do
   protected!
