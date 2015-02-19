@@ -16,7 +16,7 @@ require 'will_paginate'
 require 'will_paginate/data_mapper'
 
 configure do
-	enable :sessions
+  enable :sessions
   set :server, :puma 
   set :session_secret, 'secret stuff in here'
 end
